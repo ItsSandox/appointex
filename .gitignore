@@ -1,0 +1,42 @@
+## --- Build Results & Dependencies ---
+[Bb]in/
+[Oo]bj/
+packages/
+*.lock.json
+
+## --- Visual Studio & IDEs ---
+.vs/
+.vscode/
+.idea/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+## --- User Specific / Local Configuration ---
+# Archivos de configuración local que no deben compartirse (si usas secrets)
+local.properties
+appsettings.Development.json
+
+## --- Mac / iOS Specific ---
+.DS_Store
+*.swp
+_CodeSignature/
+# Xamarin/Maui iOS specific
+*.userprefs
+*.pidb
+*.resources
+
+## --- Android Specific ---
+# Generated folder specific to Android context usually inside obj, but good to be safe
+.gradle/
+captures/
+
+## --- Windows Specific ---
+Thumbs.db
+ehthumbs.db
+desktop.ini
+AppPackages/
+BundleArtifacts/
+Package.StoreAssociation.xml
+_pkginfo.txt

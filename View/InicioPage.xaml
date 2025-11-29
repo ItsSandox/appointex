@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:appointex.ViewModels"
+             x:Class="appointex.InicioPage"
+             x:DataType="vm:InicioViewModel"> 
+
+    <ScrollView>
+        <Grid Padding="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <!-- Borde Inferior -->
+            <Border Grid.Row="1" BackgroundColor="#ffd917" Padding="20" Margin="0,0,0,0" StrokeThickness="0">
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="50,50,0,0"/>
+                </Border.StrokeShape>
+                
+                <StackLayout Spacing="0">
+
+                    <!-- TEXTOS DINÁMICOS -->
+                    <Label Text="{Binding TitleText}" 
+                           FontSize="24" Margin="0,30,0,0" FontFamily="Montserrat-SemiBold"/>
+                    
+                    <Label Text="{Binding SubtitleText}" 
+                           FontSize="15" FontFamily="Montserrat-Regular" Margin="0,0,0,30"/>
+
+                    <Grid ColumnSpacing="10" Margin="0,0,0,20" >
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        
+                        <!-- BOTÓN PRIMARIO (Negro) -->
+                        <Button Grid.Column="0" 
+                                Text="{Binding PrimaryButtonText}" 
+                                Command="{Binding PrimaryActionCommand}"
+                                BackgroundColor="Black" 
+                                TextColor="White" 
+                                CornerRadius="20" HeightRequest="50" FontFamily="Montserrat-Medium" FontSize="16"/>
+                        
+                        <!-- BOTÓN SECUNDARIO (Blanco) -->
+                        <Button Grid.Column="1" 
+                                Text="{Binding SecondaryButtonText}" 
+                                Command="{Binding SecondaryActionCommand}"
+                                BackgroundColor="White" 
+                                TextColor="Black" 
+                                CornerRadius="20" HeightRequest="50" FontFamily="Montserrat-Medium" FontSize="16"/>
+                    </Grid>
+                </StackLayout>
+            </Border>
+        </Grid>
+    </ScrollView>
+
+</ContentPage>

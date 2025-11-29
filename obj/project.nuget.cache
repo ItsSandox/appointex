@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "oDEWEM643R4=",
+  "dgSpecHash": "DpX7hGqy2IQ=",
   "success": true,
   "projectFilePath": "C:\\Users\\derie\\Documentos\\appointex\\appointex\\appointex.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\derie\\.nuget\\packages\\communitytoolkit.mvvm\\8.4.0\\communitytoolkit.mvvm.8.4.0.nupkg.sha512",
     "C:\\Users\\derie\\.nuget\\packages\\googlegson\\2.13.0.1\\googlegson.2.13.0.1.nupkg.sha512",
     "C:\\Users\\derie\\.nuget\\packages\\microsoft.extensions.configuration\\9.0.5\\microsoft.extensions.configuration.9.0.5.nupkg.sha512",
     "C:\\Users\\derie\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\9.0.5\\microsoft.extensions.configuration.abstractions.9.0.5.nupkg.sha512",
