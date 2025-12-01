@@ -36,6 +36,10 @@ namespace appointex.ViewModels
         // Propiedad para saber qué acción ejecutar (Login o Registro real)
         [ObservableProperty]
         private bool _isLoginMode; 
+        
+        [ObservableProperty]
+        private bool _isBackButtonVisible;
+
 
         // --- COMANDOS (ACCIONES DE LOS BOTONES) ---
 
@@ -68,7 +72,11 @@ namespace appointex.ViewModels
         }
 
         // --- MÉTODOS DE ESTADO (Lógica de UI) ---
-
+         [RelayCommand]
+        private void BackAction()
+        {
+            SetWelcomeState();
+        }
         private void SetWelcomeState()
         {
             TitleText = "Bienvenido";
@@ -76,6 +84,7 @@ namespace appointex.ViewModels
             PrimaryButtonText = "Iniciar Sesión";
             SecondaryButtonText = "Crear Cuenta";
             IsLoginMode = false;
+            IsBackButtonVisible = false; 
         }
 
         private void SetRegisterState()
@@ -85,6 +94,7 @@ namespace appointex.ViewModels
             PrimaryButtonText = "Cliente";
             SecondaryButtonText = "Socio";
             IsLoginMode = false;
+            IsBackButtonVisible = true;
         }
     }
 }

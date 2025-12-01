@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("appointex")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+e76083033af2ccaddc364fda13e27b9f7f641646")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+75b738e24e2532c22ac35f9d2bc9e4543133a094")]
 [assembly: System.Reflection.AssemblyProductAttribute("appointex")]
 [assembly: System.Reflection.AssemblyTitleAttribute("appointex")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

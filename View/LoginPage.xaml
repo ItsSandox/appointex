@@ -17,6 +17,7 @@
                     <ImageButton
                         Source="flecha_atras.png"
                         HeightRequest="30"
+                        Command="{Binding BackCommand}"
                         WidthRequest="30"
                         Margin="15,0,0,0"
                         HorizontalOptions="Start"/>
@@ -87,6 +88,7 @@
                     <Button Text="Iniciar Sesión"
                             BackgroundColor="Black"
                             Grid.Row="1"
+                            Command="{Binding LoginCommand}"
                             TextColor="White"
                             CornerRadius="30"
                             HeightRequest="60"

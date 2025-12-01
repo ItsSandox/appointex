@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:vm="clr-namespace:appointex.ViewModels"
              x:Class="appointex.InicioPage"
-             x:DataType="vm:InicioViewModel"> 
+             x:DataType="vm:InicioViewModel">
 
     <ScrollView>
         <Grid Padding="0">
@@ -13,41 +13,65 @@
             </Grid.RowDefinitions>
 
             <!-- Borde Inferior -->
-            <Border Grid.Row="1" BackgroundColor="#ffd917" Padding="20" Margin="0,0,0,0" StrokeThickness="0">
+            <Border Grid.Row="1"
+                    BackgroundColor="#ffd917"
+                    Padding="20"
+                    Margin="0,0,0,0"
+                    StrokeThickness="0">
                 <Border.StrokeShape>
                     <RoundRectangle CornerRadius="50,50,0,0"/>
                 </Border.StrokeShape>
-                
+
                 <StackLayout Spacing="0">
+                    <ImageButton
+                        Source="flecha_atras.png"
+                        HeightRequest="30"
+                        WidthRequest="30"
+                        VerticalOptions="End"
+                        IsVisible="{Binding IsBackButtonVisible}"
+                        Command="{Binding BackActionCommand}"
+                        HorizontalOptions="Start"
+                        Margin="0,0,0,0"/>
 
                     <!-- TEXTOS DINÁMICOS -->
-                    <Label Text="{Binding TitleText}" 
-                           FontSize="24" Margin="0,30,0,0" FontFamily="Montserrat-SemiBold"/>
-                    
-                    <Label Text="{Binding SubtitleText}" 
-                           FontSize="15" FontFamily="Montserrat-Regular" Margin="0,0,0,30"/>
+                    <Label Text="{Binding TitleText}"
+                           FontSize="24"
+                            Margin="0,30,0,0"
+                            FontFamily="Montserrat-SemiBold"/>
 
-                    <Grid ColumnSpacing="10" Margin="0,0,0,20" >
+                    <Label Text="{Binding SubtitleText}"
+                           FontSize="15"
+                            FontFamily="Montserrat-Regular"
+                            Margin="0,0,0,30"/>
+
+                    <Grid ColumnSpacing="10"
+                            Margin="0,0,0,20">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="*"/>
                             <ColumnDefinition Width="*"/>
                         </Grid.ColumnDefinitions>
-                        
+
                         <!-- BOTÓN PRIMARIO (Negro) -->
-                        <Button Grid.Column="0" 
-                                Text="{Binding PrimaryButtonText}" 
+                        <Button Grid.Column="0"
+                                Text="{Binding PrimaryButtonText}"
                                 Command="{Binding PrimaryActionCommand}"
-                                BackgroundColor="Black" 
-                                TextColor="White" 
-                                CornerRadius="20" HeightRequest="50" FontFamily="Montserrat-Medium" FontSize="16"/>
-                        
+                                BackgroundColor="Black"
+                                TextColor="White"
+                                CornerRadius="20"
+                                HeightRequest="50"
+                                FontFamily="Montserrat-Medium"
+                                FontSize="16"/>
+
                         <!-- BOTÓN SECUNDARIO (Blanco) -->
-                        <Button Grid.Column="1" 
-                                Text="{Binding SecondaryButtonText}" 
+                        <Button Grid.Column="1"
+                                Text="{Binding SecondaryButtonText}"
                                 Command="{Binding SecondaryActionCommand}"
-                                BackgroundColor="White" 
-                                TextColor="Black" 
-                                CornerRadius="20" HeightRequest="50" FontFamily="Montserrat-Medium" FontSize="16"/>
+                                BackgroundColor="White"
+                                TextColor="Black"
+                                CornerRadius="20"
+                                HeightRequest="50"
+                                FontFamily="Montserrat-Medium"
+                                FontSize="16"/>
                     </Grid>
                 </StackLayout>
             </Border>

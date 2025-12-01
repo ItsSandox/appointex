@@ -4,10 +4,28 @@
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:appointex"
-    Title="appointex">
+    Title="appointex"
+    Shell.TabBarBackgroundColor="White"
+    Shell.TabBarTitleColor="Black" 
+    Shell.TabBarUnselectedColor="Gray"
+    Shell.TabBarForegroundColor="#ffd917">
+    
+    <TabBar x:Name ="BottomTabBar">
 
-    <ShellContent
-        ContentTemplate="{DataTemplate local:InicioPage}"
-        Route="InicioPage" />
+           <ShellContent
+            Icon="dashboard.png" 
+            Route="DashboardPage" 
+            ContentTemplate="{DataTemplate local:DashboardPage}" />
+
+           <ShellContent 
+            Icon="historial.png"
+            Route="HistoryPage" 
+            ContentTemplate="{DataTemplate local:HistoryPage}" />
+
+           <ShellContent 
+            Icon="cuenta.png" 
+            Route="AccountPage" 
+            ContentTemplate="{DataTemplate local:AccountPage}" />
+    </TabBar>
 
 </Shell>

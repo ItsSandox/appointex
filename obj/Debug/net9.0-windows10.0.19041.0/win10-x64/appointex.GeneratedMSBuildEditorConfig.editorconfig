@@ -51,6 +51,12 @@ build_metadata.AdditionalFiles.ManifestResourceName = appointex.Resources.Styles
 build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Styles.xaml
 build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Styles.xaml
 
+[C:/Users/derie/Documentos/appointex/appointex/View/AccountPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = appointex.View.AccountPage.xaml
+build_metadata.AdditionalFiles.TargetPath = View\AccountPage.xaml
+build_metadata.AdditionalFiles.RelativePath = View\AccountPage.xaml
+
 [C:/Users/derie/Documentos/appointex/appointex/View/CreateAccountClientPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = appointex.View.CreateAccountClientPage.xaml
@@ -62,6 +68,18 @@ build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = appointex.View.CreateAccountPartnerPage.xaml
 build_metadata.AdditionalFiles.TargetPath = View\CreateAccountPartnerPage.xaml
 build_metadata.AdditionalFiles.RelativePath = View\CreateAccountPartnerPage.xaml
+
+[C:/Users/derie/Documentos/appointex/appointex/View/DashboardPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = appointex.View.DashboardPage.xaml
+build_metadata.AdditionalFiles.TargetPath = View\DashboardPage.xaml
+build_metadata.AdditionalFiles.RelativePath = View\DashboardPage.xaml
+
+[C:/Users/derie/Documentos/appointex/appointex/View/HistoryPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = appointex.View.HistoryPage.xaml
+build_metadata.AdditionalFiles.TargetPath = View\HistoryPage.xaml
+build_metadata.AdditionalFiles.RelativePath = View\HistoryPage.xaml
 
 [C:/Users/derie/Documentos/appointex/appointex/View/InicioPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml

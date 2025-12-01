@@ -26,6 +26,10 @@ public static class MauiProgram
 #endif
 		builder.Services.AddSingleton<InicioPage>();
         builder.Services.AddSingleton<InicioViewModel>();
+        builder.Services.AddSingleton<LoginViewModel>();
+		builder.Services.AddSingleton<HistoryPage>();
+		builder.Services.AddSingleton<DashboardPage>();
+		builder.Services.AddSingleton<AccountPage>();
 
 		builder.Services.AddTransient<CreateAccountClientPage>();
 		builder.Services.AddTransient<CreateAccountPartnerPage>();

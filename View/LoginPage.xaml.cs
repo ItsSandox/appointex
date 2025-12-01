@@ -7,6 +7,6 @@ public partial class LoginPage : ContentPage
 	public LoginPage()
 	{
 		InitializeComponent();
-		//BindingContext = new InicioViewModel();
+		BindingContext = new LoginViewModel();
 	}
 }
