@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="appointex.View.CrearServicio"
+             Title="Crear Servicio"
+             BackgroundColor="White">
+
+    <Grid RowDefinitions="*, Auto" RowSpacing="0" Padding="20, 0, 20, 20">
+
+        <ScrollView Grid.Row="0">
+            <VerticalStackLayout Spacing="20" Padding="0, 40, 0, 20">
+
+                <!-- Botón de regreso -->
+                <ImageButton Command="{Binding GoBackCommand}"
+                             HeightRequest="40" 
+                             WidthRequest="40"
+                             HorizontalOptions="Start" 
+                             VerticalOptions="Start"
+                             Margin="0, -20, 0, 0">
+                    <ImageButton.Source>
+                        <FileImageSource File="flecha_atras.png" />
+                    </ImageButton.Source>
+                </ImageButton>
+
+                <!-- Campo Título -->
+                <Border BackgroundColor="#F0F0F0" 
+                        StrokeShape="RoundRectangle 25" 
+                        StrokeThickness="0"
+                        HeightRequest="60"
+                        Padding="15, 0"
+                        Margin="0, 10, 0, 0">
+                    <Entry Placeholder="Título" FontSize="Medium" BackgroundColor="Transparent" />
+                </Border>
+
+                <!-- Campo Descripción (Área de texto grande) -->
+                <Border BackgroundColor="#F0F0F0" 
+                        StrokeShape="RoundRectangle 25" 
+                        StrokeThickness="0"
+                        HeightRequest="150"
+                        Padding="15">
+                    <Editor Placeholder="Descripción" 
+                            FontSize="Medium" 
+                            BackgroundColor="Transparent" 
+                            VerticalOptions="FillAndExpand" />
+                </Border>
+
+                <!-- Campo Tiempo (Duración del servicio) -->
+                <Border BackgroundColor="#F0F0F0" 
+                        StrokeShape="RoundRectangle 25" 
+                        StrokeThickness="0"
+                        HeightRequest="60"
+                        Padding="15, 0">
+                    <Entry Placeholder="Tiempo" FontSize="Medium" Keyboard="Numeric" BackgroundColor="Transparent" />
+                </Border>
+
+                <!-- Campo Precio -->
+                <Border BackgroundColor="#F0F0F0" 
+                        StrokeShape="RoundRectangle 25" 
+                        StrokeThickness="0"
+                        HeightRequest="60"
+                        Padding="15, 0">
+                    <Entry Placeholder="Precio" FontSize="Medium" Keyboard="Numeric" BackgroundColor="Transparent" />
+                </Border>
+
+                <!-- Campo Duración (Nota: Ya tenemos Tiempo, se podría usar esto para la unidad) -->
+                <Border BackgroundColor="#F0F0F0" 
+                        StrokeShape="RoundRectangle 25" 
+                        StrokeThickness="0"
+                        HeightRequest="60"
+                        Padding="15, 0">
+                    <Entry Placeholder="Duración (Ej: Horas, Días)" FontSize="Medium" BackgroundColor="Transparent" />
+                </Border>
+
+                <!-- Elige una foto -->
+                <Border BackgroundColor="#F0F0F0" 
+                        StrokeShape="RoundRectangle 25" 
+                        StrokeThickness="0"
+                        HeightRequest="60"
+                        Padding="15, 0">
+                    <Grid ColumnDefinitions="*, Auto" VerticalOptions="Center">
+                        <Label Grid.Column="0" Text="Elige una foto" FontSize="Medium" TextColor="#555555" VerticalOptions="Center"/>
+                        <!-- Ícono de subida de archivo -->
+                        <ImageButton Grid.Column="1" Command="{Binding ElegirFotoCommand}" BackgroundColor="Transparent" HeightRequest="25" WidthRequest="25">
+                            <ImageButton.Source >
+                                <FileImageSource File="subir.png" />
+                            </ImageButton.Source>
+                        </ImageButton>
+                    </Grid>
+                </Border>
+
+            </VerticalStackLayout>
+        </ScrollView>
+
+        <!-- Botón Confirmar (parte inferior) -->
+        <Button Grid.Row="1"
+                Text="Confirmar"
+                FontAttributes="Bold"
+                FontSize="Large"
+                HeightRequest="55"
+                CornerRadius="10"
+                BackgroundColor="#FFD700"
+                TextColor="Black"
+                Command="{Binding ConfirmarCreacionCommand}"
+                Margin="0, 10, 0, 0"/>
+    </Grid>
+</ContentPage>

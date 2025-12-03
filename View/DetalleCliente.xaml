@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="appointex.View.DetalleCliente"
+             Title="Servicio Solicitado"
+             BackgroundColor="White">
+
+    <Grid RowDefinitions="Auto, *, Auto" RowSpacing="0" Padding="20">
+
+        <!-- Botón de regreso -->
+        <ImageButton Grid.Row="0"
+                     Command="{Binding GoBackCommand}"
+                     HeightRequest="40" 
+                     WidthRequest="40"
+                     HorizontalOptions="Start" 
+                     VerticalOptions="Start"
+                     Margin="0, 20, 0, 20">
+            <ImageButton.Source>
+                <FileImageSource File="flecha_atras.png" />
+            </ImageButton.Source>
+        </ImageButton>
+
+        <ScrollView Grid.Row="1">
+            <VerticalStackLayout Spacing="25" Margin="0, 0, 0, 20">
+
+                <!-- Título Principal -->
+                <Label Text="Servicio solicitado" 
+                       FontSize="Large" 
+                       />
+
+                <!-- Detalle del Servicio -->
+                <VerticalStackLayout Spacing="10">
+                    <Label Text="Limpieza del hogar" 
+                           FontSize="Title" 
+                           />
+                </VerticalStackLayout>
+
+                <!-- Fecha y Hora -->
+                <VerticalStackLayout Spacing="5">
+                    <Label Text="Fecha y hora" 
+                           FontSize="Medium" 
+                           TextColor="#555555" />
+                    <Label Text="25/11/2025 2:30 p. m." 
+                           FontSize="Large" 
+                           />
+                </VerticalStackLayout>
+
+                <!-- Nota del Cliente -->
+                <VerticalStackLayout Spacing="10">
+                    <Label Text="Nota" 
+                           FontSize="Medium" 
+                           TextColor="#555555" />
+                    <Label Text="Hola, quiero solicitar un servicio de limpieza general para mi apartamento de dos habitaciones. Me gustaría que le pongan un poco más de atención a la cocina y a los baños, que es donde más lo necesito. Tengo un perrito pequeño, pero lo voy a dejar en una habitación aparte para que no moleste." 
+                           FontSize="Medium" 
+                           LineHeight="1.2" />
+                </VerticalStackLayout>
+
+                <!-- Estado -->
+                <VerticalStackLayout Spacing="10">
+                    <Label Text="Estado" 
+                           FontSize="Medium" 
+                           TextColor="#555555" />
+                    <Border BackgroundColor="#e6ffe6" 
+                            StrokeShape="RoundRectangle 15" 
+                            StrokeThickness="0"
+                            Padding="15, 8">
+                        <Label Text="Aprobado" 
+                               FontSize="Medium" 
+                               TextColor="#008000" 
+                               FontAttributes="Bold" />
+                    </Border>
+                </VerticalStackLayout>
+
+            </VerticalStackLayout>
+        </ScrollView>
+    </Grid>
+</ContentPage>

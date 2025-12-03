@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="appointex.View.Solicitar"
+             Title="Solicitar"
+             BackgroundColor="White">
+
+    <Grid RowDefinitions="*, Auto" RowSpacing="0">
+
+        <ScrollView Grid.Row="0">
+            <VerticalStackLayout Spacing="0">
+
+                <Grid HeightRequest="350">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+
+                    <CarouselView Grid.Row="0" Grid.RowSpan="2" IndicatorView="Indicator">
+                        <CarouselView.ItemsSource>
+                            <x:Array Type="{x:Type x:String}">
+                                <x:String>limpia.png</x:String>
+                                <x:String>limpia2.png</x:String>
+                            </x:Array>
+                        </CarouselView.ItemsSource>
+                        <CarouselView.ItemTemplate>
+                            <DataTemplate>
+                                <Image Source="limpia.png" 
+                                       Aspect="AspectFill" />
+                            </DataTemplate>
+                        </CarouselView.ItemTemplate>
+                    </CarouselView>
+
+                    <Border Grid.Row="0" 
+                            Margin="20, 40, 0, 0" 
+                            HeightRequest="40" 
+                            WidthRequest="40"
+                            HorizontalOptions="Start" 
+                            VerticalOptions="Start"
+                            StrokeShape="RoundRectangle 20"
+                            StrokeThickness="0"
+                            BackgroundColor="White"
+                            Shadow="{OnPlatform Default='{x:Null}', Android='{x:Null}', iOS='{x:Null}'}">
+                        <ImageButton Padding="10" 
+                                     BackgroundColor="Transparent">
+                            <ImageButton.Source>
+                                <FileImageSource File="flecha_atras.png" />
+                            </ImageButton.Source>
+                        </ImageButton>
+                    </Border>
+
+                    <IndicatorView x:Name="Indicator" 
+                                   Grid.Row="1" 
+                                   Margin="0, 0, 0, 20"
+                                   VerticalOptions="End" 
+                                   HorizontalOptions="Center" 
+                                   IndicatorSize="8"
+                                   IndicatorColor="#cccccc" 
+                                   SelectedIndicatorColor="Black" />
+                </Grid>
+
+                <VerticalStackLayout Padding="20" Spacing="15">
+
+                    <Label Text="Limpieza del hogar" 
+                           FontSize="Title" 
+                           FontAttributes="Bold" />
+
+                    <HorizontalStackLayout Spacing="20">
+                        <HorizontalStackLayout Spacing="5" VerticalOptions="Center">
+                            <Image Source="despertador.png" 
+                                   HeightRequest="16" />
+                            <Label Text="1 h 30 min" 
+                                   FontSize="Body" 
+                                   VerticalOptions="Center" />
+                        </HorizontalStackLayout>
+
+                        <HorizontalStackLayout Spacing="5" VerticalOptions="Center">
+                            <Image Source="dolar.png" 
+                                   HeightRequest="16" />
+                            <Label Text="1,200" 
+                                   FontSize="Body" 
+                                   VerticalOptions="Center" />
+                        </HorizontalStackLayout>
+                    </HorizontalStackLayout>
+
+                    <Label Text="Un servicio completo que incluye barrido, trapeado, desempolvado de superficies, limpieza de baños y áreas comunes. Ideal para mantener tu hogar en excelentes condiciones." 
+                           FontSize="Medium" 
+                           TextColor="#555555" />
+
+                    <BoxView HeightRequest="1" 
+                             Color="#cccccc" 
+                             Margin="0, 10, 0, 10" />
+
+                    <Border BackgroundColor="#F0F0F0" 
+                            Padding="15" 
+                            StrokeShape="RoundRectangle 15" 
+                            StrokeThickness="0">
+                        <HorizontalStackLayout Spacing="15" VerticalOptions="Center">
+                            <Image Source="perfil.png" 
+                                   HeightRequest="50" 
+                                   WidthRequest="50" 
+                                   Aspect="AspectFill">
+                                <Image.Clip>
+                                    <EllipseGeometry Center="25,25" RadiusX="25" RadiusY="25"/>
+                                </Image.Clip>
+                            </Image>
+
+                            <VerticalStackLayout Spacing="2" VerticalOptions="Center">
+                                <Label Text="Pedro García" 
+                                       FontSize="Medium" 
+                                       FontAttributes="Bold" />
+                                <Label Text="Trabajador de limpieza" 
+                                       FontSize="Small" 
+                                       TextColor="#777777" />
+                            </VerticalStackLayout>
+                        </HorizontalStackLayout>
+                    </Border>
+                </VerticalStackLayout>
+            </VerticalStackLayout>
+        </ScrollView>
+
+        <Border Grid.Row="1" BackgroundColor="White" Padding="20">
+            <Button Text="Solicitar"
+                    FontAttributes="Bold"
+                    FontSize="Large"
+                    HeightRequest="55"
+                    CornerRadius="10"
+                    BackgroundColor="#FFD700"
+                    TextColor="Black"
+                    Command="{Binding SolicitarCommand}" />
+        </Border>
+    </Grid>
+</ContentPage>

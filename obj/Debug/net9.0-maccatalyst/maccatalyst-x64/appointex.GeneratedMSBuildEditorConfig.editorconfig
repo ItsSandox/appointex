@@ -17,74 +17,104 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = appointex
-build_property.ProjectDir = C:\Users\derie\Documentos\appointex\appointex\
+build_property.ProjectDir = C:\Users\lenovo\Desktop\AppOintex\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.EffectiveAnalysisLevelStyle = 9.0
 build_property.EnableCodeStyleSeverity = 
 
-[C:/Users/derie/Documentos/appointex/appointex/App.xaml]
+[C:/Users/lenovo/Desktop/AppOintex/App.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = appointex.App.xaml
 build_metadata.AdditionalFiles.TargetPath = App.xaml
 build_metadata.AdditionalFiles.RelativePath = App.xaml
 
-[C:/Users/derie/Documentos/appointex/appointex/AppShell.xaml]
+[C:/Users/lenovo/Desktop/AppOintex/AppShell.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = appointex.AppShell.xaml
 build_metadata.AdditionalFiles.TargetPath = AppShell.xaml
 build_metadata.AdditionalFiles.RelativePath = AppShell.xaml
 
-[C:/Users/derie/Documentos/appointex/appointex/Resources/Styles/Colors.xaml]
+[C:/Users/lenovo/Desktop/AppOintex/Resources/Styles/Colors.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = appointex.Resources.Styles.Colors.xaml
 build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Colors.xaml
 build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Colors.xaml
 
-[C:/Users/derie/Documentos/appointex/appointex/Resources/Styles/Styles.xaml]
+[C:/Users/lenovo/Desktop/AppOintex/Resources/Styles/Styles.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = appointex.Resources.Styles.Styles.xaml
 build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Styles.xaml
 build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Styles.xaml
 
-[C:/Users/derie/Documentos/appointex/appointex/View/AccountPage.xaml]
+[C:/Users/lenovo/Desktop/AppOintex/View/AccountPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = appointex.View.AccountPage.xaml
 build_metadata.AdditionalFiles.TargetPath = View\AccountPage.xaml
 build_metadata.AdditionalFiles.RelativePath = View\AccountPage.xaml
 
-[C:/Users/derie/Documentos/appointex/appointex/View/CreateAccountClientPage.xaml]
+[C:/Users/lenovo/Desktop/AppOintex/View/ConfirmarCita.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = appointex.View.ConfirmarCita.xaml
+build_metadata.AdditionalFiles.TargetPath = View\ConfirmarCita.xaml
+build_metadata.AdditionalFiles.RelativePath = View\ConfirmarCita.xaml
+
+[C:/Users/lenovo/Desktop/AppOintex/View/CrearServicio.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = appointex.View.CrearServicio.xaml
+build_metadata.AdditionalFiles.TargetPath = View\CrearServicio.xaml
+build_metadata.AdditionalFiles.RelativePath = View\CrearServicio.xaml
+
+[C:/Users/lenovo/Desktop/AppOintex/View/CreateAccountClientPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = appointex.View.CreateAccountClientPage.xaml
 build_metadata.AdditionalFiles.TargetPath = View\CreateAccountClientPage.xaml
 build_metadata.AdditionalFiles.RelativePath = View\CreateAccountClientPage.xaml
 
-[C:/Users/derie/Documentos/appointex/appointex/View/CreateAccountPartnerPage.xaml]
+[C:/Users/lenovo/Desktop/AppOintex/View/CreateAccountPartnerPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = appointex.View.CreateAccountPartnerPage.xaml
 build_metadata.AdditionalFiles.TargetPath = View\CreateAccountPartnerPage.xaml
 build_metadata.AdditionalFiles.RelativePath = View\CreateAccountPartnerPage.xaml
 
-[C:/Users/derie/Documentos/appointex/appointex/View/DashboardPage.xaml]
+[C:/Users/lenovo/Desktop/AppOintex/View/DashboardPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = appointex.View.DashboardPage.xaml
 build_metadata.AdditionalFiles.TargetPath = View\DashboardPage.xaml
 build_metadata.AdditionalFiles.RelativePath = View\DashboardPage.xaml
 
-[C:/Users/derie/Documentos/appointex/appointex/View/HistoryPage.xaml]
+[C:/Users/lenovo/Desktop/AppOintex/View/DetalleAdmin.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = appointex.View.DetalleAdmin.xaml
+build_metadata.AdditionalFiles.TargetPath = View\DetalleAdmin.xaml
+build_metadata.AdditionalFiles.RelativePath = View\DetalleAdmin.xaml
+
+[C:/Users/lenovo/Desktop/AppOintex/View/DetalleCliente.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = appointex.View.DetalleCliente.xaml
+build_metadata.AdditionalFiles.TargetPath = View\DetalleCliente.xaml
+build_metadata.AdditionalFiles.RelativePath = View\DetalleCliente.xaml
+
+[C:/Users/lenovo/Desktop/AppOintex/View/HistoryPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = appointex.View.HistoryPage.xaml
 build_metadata.AdditionalFiles.TargetPath = View\HistoryPage.xaml
 build_metadata.AdditionalFiles.RelativePath = View\HistoryPage.xaml
 
-[C:/Users/derie/Documentos/appointex/appointex/View/InicioPage.xaml]
+[C:/Users/lenovo/Desktop/AppOintex/View/InicioPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = appointex.View.InicioPage.xaml
 build_metadata.AdditionalFiles.TargetPath = View\InicioPage.xaml
 build_metadata.AdditionalFiles.RelativePath = View\InicioPage.xaml
 
-[C:/Users/derie/Documentos/appointex/appointex/View/LoginPage.xaml]
+[C:/Users/lenovo/Desktop/AppOintex/View/LoginPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = appointex.View.LoginPage.xaml
 build_metadata.AdditionalFiles.TargetPath = View\LoginPage.xaml
 build_metadata.AdditionalFiles.RelativePath = View\LoginPage.xaml
+
+[C:/Users/lenovo/Desktop/AppOintex/View/Solicitar.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = appointex.View.Solicitar.xaml
+build_metadata.AdditionalFiles.TargetPath = View\Solicitar.xaml
+build_metadata.AdditionalFiles.RelativePath = View\Solicitar.xaml

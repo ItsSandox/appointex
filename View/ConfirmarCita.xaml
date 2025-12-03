@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="appointex.View.ConfirmarCita"
+             Title="Confirmar Cita"
+             BackgroundColor="White">
+
+    <Grid RowDefinitions="*, Auto" RowSpacing="0" Padding="20">
+
+        <!-- Botón de regreso -->
+        <ImageButton Grid.Row="0"
+                     Margin="0, 20, 0, 0"
+                     HeightRequest="40" 
+                     WidthRequest="30"
+                     HorizontalOptions="Start" 
+                     VerticalOptions="Start"
+                     Command="{Binding GoBackCommand}">
+            <ImageButton.Source>
+                <FileImageSource File="flecha_atras.png" />
+            </ImageButton.Source>
+        </ImageButton>
+
+        <VerticalStackLayout Grid.Row="0" Spacing="25" Margin="0, 80, 0, 0">
+
+            <!-- Campo de Fecha y Hora -->
+            <Border BackgroundColor="#F0F0F0" 
+                    StrokeShape="RoundRectangle 25" 
+                    StrokeThickness="0"
+                    HeightRequest="60"
+                    Padding="15, 0">
+                <Grid ColumnDefinitions="*, Auto" VerticalOptions="Center">
+                    <Label Grid.Column="0" Text="Fecha y hora" FontSize="Medium" TextColor="#555555" VerticalOptions="Center"/>
+                    <Image Grid.Column="1" Source="calendario.png" HeightRequest="20" />
+                    <!-- Nota: Un DatePicker/TimePicker real se colocaría aquí o se invocaría al tocar el Border -->
+                </Grid>
+            </Border>
+
+            <!-- Campo de Notas (TextArea) -->
+            <Border BackgroundColor="#F0F0F0" 
+                    StrokeShape="RoundRectangle 25" 
+                    StrokeThickness="0"
+                    HeightRequest="200"
+                    Padding="15">
+                <Editor Placeholder="Notas" 
+                        BackgroundColor="Transparent" 
+                        VerticalOptions="FillAndExpand" />
+            </Border>
+
+        </VerticalStackLayout>
+
+        <!-- Botón de Confirmar (parte inferior) -->
+        <Button Grid.Row="1"
+                Text="Confirmar"
+                FontAttributes="Bold"
+                FontSize="Large"
+                HeightRequest="55"
+                CornerRadius="10"
+                BackgroundColor="#FFD700"
+                TextColor="Black"
+                Command="{Binding ConfirmarCitaCommand}"
+                Margin="0, 20, 0, 0"/>
+    </Grid>
+</ContentPage>

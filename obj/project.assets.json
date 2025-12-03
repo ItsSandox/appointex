@@ -439,7 +439,7 @@
           "buildTransitive/Microsoft.Maui.Resizetizer.targets": {}
         }
       },
-      "Microsoft.NET.ILLink.Tasks/9.0.9": {
+      "Microsoft.NET.ILLink.Tasks/9.0.5": {
         "type": "package",
         "build": {
           "build/Microsoft.NET.ILLink.Tasks.props": {}
@@ -2749,7 +2749,7 @@
           "buildTransitive/Microsoft.Maui.Resizetizer.targets": {}
         }
       },
-      "Microsoft.NET.ILLink.Tasks/9.0.9": {
+      "Microsoft.NET.ILLink.Tasks/9.0.5": {
         "type": "package",
         "build": {
           "build/Microsoft.NET.ILLink.Tasks.props": {}
@@ -5059,7 +5059,7 @@
           "buildTransitive/Microsoft.Maui.Resizetizer.targets": {}
         }
       },
-      "Microsoft.NET.ILLink.Tasks/9.0.9": {
+      "Microsoft.NET.ILLink.Tasks/9.0.5": {
         "type": "package",
         "build": {
           "build/Microsoft.NET.ILLink.Tasks.props": {}
@@ -7369,7 +7369,7 @@
           "buildTransitive/Microsoft.Maui.Resizetizer.targets": {}
         }
       },
-      "Microsoft.NET.ILLink.Tasks/9.0.9": {
+      "Microsoft.NET.ILLink.Tasks/9.0.5": {
         "type": "package",
         "build": {
           "build/Microsoft.NET.ILLink.Tasks.props": {}
@@ -9679,7 +9679,7 @@
           "buildTransitive/Microsoft.Maui.Resizetizer.targets": {}
         }
       },
-      "Microsoft.NET.ILLink.Tasks/9.0.9": {
+      "Microsoft.NET.ILLink.Tasks/9.0.5": {
         "type": "package",
         "build": {
           "build/Microsoft.NET.ILLink.Tasks.props": {}
@@ -11989,7 +11989,7 @@
           "buildTransitive/Microsoft.Maui.Resizetizer.targets": {}
         }
       },
-      "Microsoft.NET.ILLink.Tasks/9.0.9": {
+      "Microsoft.NET.ILLink.Tasks/9.0.5": {
         "type": "package",
         "build": {
           "build/Microsoft.NET.ILLink.Tasks.props": {}
@@ -14272,7 +14272,7 @@
           "buildTransitive/Microsoft.Maui.Resizetizer.targets": {}
         }
       },
-      "Microsoft.NET.ILLink.Tasks/9.0.9": {
+      "Microsoft.NET.ILLink.Tasks/9.0.5": {
         "type": "package",
         "build": {
           "build/Microsoft.NET.ILLink.Tasks.props": {}
@@ -14690,7 +14690,7 @@
           "buildTransitive/Microsoft.Maui.Resizetizer.targets": {}
         }
       },
-      "Microsoft.NET.ILLink.Tasks/9.0.9": {
+      "Microsoft.NET.ILLink.Tasks/9.0.5": {
         "type": "package",
         "build": {
           "build/Microsoft.NET.ILLink.Tasks.props": {}
@@ -15108,7 +15108,7 @@
           "buildTransitive/Microsoft.Maui.Resizetizer.targets": {}
         }
       },
-      "Microsoft.NET.ILLink.Tasks/9.0.9": {
+      "Microsoft.NET.ILLink.Tasks/9.0.5": {
         "type": "package",
         "build": {
           "build/Microsoft.NET.ILLink.Tasks.props": {}
@@ -15526,7 +15526,7 @@
           "buildTransitive/Microsoft.Maui.Resizetizer.targets": {}
         }
       },
-      "Microsoft.NET.ILLink.Tasks/9.0.9": {
+      "Microsoft.NET.ILLink.Tasks/9.0.5": {
         "type": "package",
         "build": {
           "build/Microsoft.NET.ILLink.Tasks.props": {}
@@ -15944,7 +15944,7 @@
           "buildTransitive/Microsoft.Maui.Resizetizer.targets": {}
         }
       },
-      "Microsoft.NET.ILLink.Tasks/9.0.9": {
+      "Microsoft.NET.ILLink.Tasks/9.0.5": {
         "type": "package",
         "build": {
           "build/Microsoft.NET.ILLink.Tasks.props": {}
@@ -16362,7 +16362,7 @@
           "buildTransitive/Microsoft.Maui.Resizetizer.targets": {}
         }
       },
-      "Microsoft.NET.ILLink.Tasks/9.0.9": {
+      "Microsoft.NET.ILLink.Tasks/9.0.5": {
         "type": "package",
         "build": {
           "build/Microsoft.NET.ILLink.Tasks.props": {}
@@ -16780,7 +16780,7 @@
           "buildTransitive/Microsoft.Maui.Resizetizer.targets": {}
         }
       },
-      "Microsoft.NET.ILLink.Tasks/9.0.9": {
+      "Microsoft.NET.ILLink.Tasks/9.0.5": {
         "type": "package",
         "build": {
           "build/Microsoft.NET.ILLink.Tasks.props": {}
@@ -17198,7 +17198,7 @@
           "buildTransitive/Microsoft.Maui.Resizetizer.targets": {}
         }
       },
-      "Microsoft.NET.ILLink.Tasks/9.0.9": {
+      "Microsoft.NET.ILLink.Tasks/9.0.5": {
         "type": "package",
         "build": {
           "build/Microsoft.NET.ILLink.Tasks.props": {}
@@ -17616,7 +17616,7 @@
           "buildTransitive/Microsoft.Maui.Resizetizer.targets": {}
         }
       },
-      "Microsoft.NET.ILLink.Tasks/9.0.9": {
+      "Microsoft.NET.ILLink.Tasks/9.0.5": {
         "type": "package",
         "build": {
           "build/Microsoft.NET.ILLink.Tasks.props": {}
@@ -18034,7 +18034,7 @@
           "buildTransitive/Microsoft.Maui.Resizetizer.targets": {}
         }
       },
-      "Microsoft.NET.ILLink.Tasks/9.0.9": {
+      "Microsoft.NET.ILLink.Tasks/9.0.5": {
         "type": "package",
         "build": {
           "build/Microsoft.NET.ILLink.Tasks.props": {}
@@ -18452,7 +18452,7 @@
           "buildTransitive/Microsoft.Maui.Resizetizer.targets": {}
         }
       },
-      "Microsoft.NET.ILLink.Tasks/9.0.9": {
+      "Microsoft.NET.ILLink.Tasks/9.0.5": {
         "type": "package",
         "build": {
           "build/Microsoft.NET.ILLink.Tasks.props": {}
@@ -18870,7 +18870,7 @@
           "buildTransitive/Microsoft.Maui.Resizetizer.targets": {}
         }
       },
-      "Microsoft.NET.ILLink.Tasks/9.0.9": {
+      "Microsoft.NET.ILLink.Tasks/9.0.5": {
         "type": "package",
         "build": {
           "build/Microsoft.NET.ILLink.Tasks.props": {}
@@ -23016,7 +23016,7 @@
       ]
     },
     "Microsoft.Maui.Controls/9.0.82": {
-      "sha512": "WXSPDEnhYiybkqK+DXQ1Uv5UHYRh7bXH2W/XJ+kheYfsmrjWRh4XpqfvqIsaDIk+UP43M7zdi4EOaNQDspLdZQ==",
+      "sha512": "U6Nf+fhWHR5HeqqxFUNksV7Kp0lLPJlxc7Oc0bjqC8xIm8Ru1IUfM1woPE61OgNqaEMYBMT/92JT+FoYIL0jKg==",
       "type": "package",
       "path": "microsoft.maui.controls/9.0.82",
       "files": [
@@ -23031,7 +23031,7 @@
       ]
     },
     "Microsoft.Maui.Controls.Build.Tasks/9.0.82": {
-      "sha512": "6AcZJM3Ra6XKUb7fylipcOgANPdVgP3sVx25RFkAdBMwOj0zg15nMpoDqXLtm1rmB5s2Nm0DCV5+mx046VFlcQ==",
+      "sha512": "/yDhvgzCoA0KbsxWxzt0h6nIxhjfN5teZa4GXZ0bCY4tjhxer7q4kmjk7hcvZqMnNGoVi3J3v7p02ilxWXoVMw==",
       "type": "package",
       "path": "microsoft.maui.controls.build.tasks/9.0.82",
       "files": [
@@ -23120,7 +23120,7 @@
       ]
     },
     "Microsoft.Maui.Controls.Core/9.0.82": {
-      "sha512": "fjZj0yYUXJjX7e2/+WCy741WC3LBTsMoZmkR32lPqOrhZ47OPYyehLYMvsXf51KbawYn+3miWqBcBedMPJaHYA==",
+      "sha512": "V+NZoAAprq2Y8hL9qdfG4io3j6dkIb/77ZJ73NMjk+hhZbefaR66o/Mgr/saY5MEzTDMKoo+FFBo3UjQl5q3cg==",
       "type": "package",
       "path": "microsoft.maui.controls.core/9.0.82",
       "files": [
@@ -23137,73 +23137,39 @@
         "lib/net9.0-android35.0/Microsoft.Maui.Controls.pdb",
         "lib/net9.0-android35.0/Microsoft.Maui.Controls.xml",
         "lib/net9.0-android35.0/ar/Microsoft.Maui.Controls.resources.dll",
-        "lib/net9.0-android35.0/ar/shrunk/Microsoft.Maui.Controls.resources.dll",
         "lib/net9.0-android35.0/ca/Microsoft.Maui.Controls.resources.dll",
-        "lib/net9.0-android35.0/ca/shrunk/Microsoft.Maui.Controls.resources.dll",
         "lib/net9.0-android35.0/cs/Microsoft.Maui.Controls.resources.dll",
-        "lib/net9.0-android35.0/cs/shrunk/Microsoft.Maui.Controls.resources.dll",
         "lib/net9.0-android35.0/da/Microsoft.Maui.Controls.resources.dll",
-        "lib/net9.0-android35.0/da/shrunk/Microsoft.Maui.Controls.resources.dll",
         "lib/net9.0-android35.0/de/Microsoft.Maui.Controls.resources.dll",
-        "lib/net9.0-android35.0/de/shrunk/Microsoft.Maui.Controls.resources.dll",
         "lib/net9.0-android35.0/el/Microsoft.Maui.Controls.resources.dll",
-        "lib/net9.0-android35.0/el/shrunk/Microsoft.Maui.Controls.resources.dll",
         "lib/net9.0-android35.0/es/Microsoft.Maui.Controls.resources.dll",
-        "lib/net9.0-android35.0/es/shrunk/Microsoft.Maui.Controls.resources.dll",
         "lib/net9.0-android35.0/fi/Microsoft.Maui.Controls.resources.dll",
-        "lib/net9.0-android35.0/fi/shrunk/Microsoft.Maui.Controls.resources.dll",
         "lib/net9.0-android35.0/fr/Microsoft.Maui.Controls.resources.dll",
-        "lib/net9.0-android35.0/fr/shrunk/Microsoft.Maui.Controls.resources.dll",
         "lib/net9.0-android35.0/he/Microsoft.Maui.Controls.resources.dll",
-        "lib/net9.0-android35.0/he/shrunk/Microsoft.Maui.Controls.resources.dll",
         "lib/net9.0-android35.0/hi/Microsoft.Maui.Controls.resources.dll",
-        "lib/net9.0-android35.0/hi/shrunk/Microsoft.Maui.Controls.resources.dll",
         "lib/net9.0-android35.0/hr/Microsoft.Maui.Controls.resources.dll",
-        "lib/net9.0-android35.0/hr/shrunk/Microsoft.Maui.Controls.resources.dll",
         "lib/net9.0-android35.0/hu/Microsoft.Maui.Controls.resources.dll",
-        "lib/net9.0-android35.0/hu/shrunk/Microsoft.Maui.Controls.resources.dll",
         "lib/net9.0-android35.0/id/Microsoft.Maui.Controls.resources.dll",
-        "lib/net9.0-android35.0/id/shrunk/Microsoft.Maui.Controls.resources.dll",
         "lib/net9.0-android35.0/it/Microsoft.Maui.Controls.resources.dll",
-        "lib/net9.0-android35.0/it/shrunk/Microsoft.Maui.Controls.resources.dll",
         "lib/net9.0-android35.0/ja/Microsoft.Maui.Controls.resources.dll",
-        "lib/net9.0-android35.0/ja/shrunk/Microsoft.Maui.Controls.resources.dll",
         "lib/net9.0-android35.0/ko/Microsoft.Maui.Controls.resources.dll",
-        "lib/net9.0-android35.0/ko/shrunk/Microsoft.Maui.Controls.resources.dll",
         "lib/net9.0-android35.0/ms/Microsoft.Maui.Controls.resources.dll",
-        "lib/net9.0-android35.0/ms/shrunk/Microsoft.Maui.Controls.resources.dll",
         "lib/net9.0-android35.0/nb/Microsoft.Maui.Controls.resources.dll",
-        "lib/net9.0-android35.0/nb/shrunk/Microsoft.Maui.Controls.resources.dll",
         "lib/net9.0-android35.0/nl/Microsoft.Maui.Controls.resources.dll",
-        "lib/net9.0-android35.0/nl/shrunk/Microsoft.Maui.Controls.resources.dll",
         "lib/net9.0-android35.0/pl/Microsoft.Maui.Controls.resources.dll",
-        "lib/net9.0-android35.0/pl/shrunk/Microsoft.Maui.Controls.resources.dll",
         "lib/net9.0-android35.0/pt-BR/Microsoft.Maui.Controls.resources.dll",
-        "lib/net9.0-android35.0/pt-BR/shrunk/Microsoft.Maui.Controls.resources.dll",
         "lib/net9.0-android35.0/pt/Microsoft.Maui.Controls.resources.dll",
-        "lib/net9.0-android35.0/pt/shrunk/Microsoft.Maui.Controls.resources.dll",
         "lib/net9.0-android35.0/ro/Microsoft.Maui.Controls.resources.dll",
-        "lib/net9.0-android35.0/ro/shrunk/Microsoft.Maui.Controls.resources.dll",
         "lib/net9.0-android35.0/ru/Microsoft.Maui.Controls.resources.dll",
-        "lib/net9.0-android35.0/ru/shrunk/Microsoft.Maui.Controls.resources.dll",
         "lib/net9.0-android35.0/sk/Microsoft.Maui.Controls.resources.dll",
-        "lib/net9.0-android35.0/sk/shrunk/Microsoft.Maui.Controls.resources.dll",
         "lib/net9.0-android35.0/sv/Microsoft.Maui.Controls.resources.dll",
-        "lib/net9.0-android35.0/sv/shrunk/Microsoft.Maui.Controls.resources.dll",
         "lib/net9.0-android35.0/th/Microsoft.Maui.Controls.resources.dll",
-        "lib/net9.0-android35.0/th/shrunk/Microsoft.Maui.Controls.resources.dll",
         "lib/net9.0-android35.0/tr/Microsoft.Maui.Controls.resources.dll",
-        "lib/net9.0-android35.0/tr/shrunk/Microsoft.Maui.Controls.resources.dll",
         "lib/net9.0-android35.0/uk/Microsoft.Maui.Controls.resources.dll",
-        "lib/net9.0-android35.0/uk/shrunk/Microsoft.Maui.Controls.resources.dll",
         "lib/net9.0-android35.0/vi/Microsoft.Maui.Controls.resources.dll",
-        "lib/net9.0-android35.0/vi/shrunk/Microsoft.Maui.Controls.resources.dll",
         "lib/net9.0-android35.0/zh-HK/Microsoft.Maui.Controls.resources.dll",
-        "lib/net9.0-android35.0/zh-HK/shrunk/Microsoft.Maui.Controls.resources.dll",
         "lib/net9.0-android35.0/zh-Hans/Microsoft.Maui.Controls.resources.dll",
-        "lib/net9.0-android35.0/zh-Hans/shrunk/Microsoft.Maui.Controls.resources.dll",
         "lib/net9.0-android35.0/zh-Hant/Microsoft.Maui.Controls.resources.dll",
-        "lib/net9.0-android35.0/zh-Hant/shrunk/Microsoft.Maui.Controls.resources.dll",
         "lib/net9.0-ios18.0/Design/Microsoft.Maui.Controls.DesignTools.dll",
         "lib/net9.0-ios18.0/Design/Microsoft.Maui.Controls.DesignTools.pdb",
         "lib/net9.0-ios18.0/Microsoft.Maui.Controls.dll",
@@ -23523,7 +23489,7 @@
       ]
     },
     "Microsoft.Maui.Controls.Xaml/9.0.82": {
-      "sha512": "YJ6InQd0wQC8T7t2cZMjw8SljYybp8lgjph0kL32HvAlMHqd3tbu4/FCnrLNh4pwSH1QxivXyRT8cltq8XsuqQ==",
+      "sha512": "Vyr9pxivxwNkC0fHfiF/oRA4zLkxTap6vLCPh2O4AHRBrJ4t1il4LPu42aewyJfyia4XI6hd3OfMc1WwBVksaA==",
       "type": "package",
       "path": "microsoft.maui.controls.xaml/9.0.82",
       "files": [
@@ -23583,7 +23549,7 @@
       ]
     },
     "Microsoft.Maui.Core/9.0.82": {
-      "sha512": "2YEGZXk1WVHEy0HUnc1x8kaGABTwfpkFkz5BBTMZc3llh3p8XSX4WGGZqMUD13A5m6xJ1HHXRu+I/+D5NpY+Nw==",
+      "sha512": "U9j33+aUwlkafwtKHWgSvFn7sUDToXVwj4NbPYzrf/YdUhMfesbn1VXBg4w7HKuj2f+Cgxuz8n9iD1DgLrMSbg==",
       "type": "package",
       "path": "microsoft.maui.core/9.0.82",
       "files": [
@@ -23637,7 +23603,7 @@
       ]
     },
     "Microsoft.Maui.Essentials/9.0.82": {
-      "sha512": "9mOHlDaJzNIii61wM6/jIGJ0SGEu2CTZjThcQRsALP1JeMEYMAqA5WMHqHAw2aR15sJqTSTnijjHA4wRL7MPUg==",
+      "sha512": "WOfi/sMbOuFfZOuhDntYVJtKZx43hXCz0iknucE2NomVu8KyKLL7lSMLOkI74d0VbyPqqHCxj54BBx23a+4gOg==",
       "type": "package",
       "path": "microsoft.maui.essentials/9.0.82",
       "files": [
@@ -23680,7 +23646,7 @@
       ]
     },
     "Microsoft.Maui.Graphics/9.0.82": {
-      "sha512": "UcKU5WdAFly1f2JjKw2dW5nEx3PTHiTuBu5CcCp/Tuc7YjV14MtOBYCczlWqVZncrPtkqnHIe9yK7ew5/e6Ozw==",
+      "sha512": "l4DNNONAEUOmkLXMhDxR7T5BtUY1u76pEs4sHLjH6CiZHR1pky8iurxaADyj1iMvbtJNishaFl4EDO/paq7/iw==",
       "type": "package",
       "path": "microsoft.maui.graphics/9.0.82",
       "files": [
@@ -23725,7 +23691,7 @@
       ]
     },
     "Microsoft.Maui.Graphics.Win2D.WinUI.Desktop/9.0.82": {
-      "sha512": "+5RyvUcgx5Pac0WcCY/JaHO9cCEsG3ElgL+Lj2DkTc+3NV17EbmtGQcDGXrfM1CuU11mBW+wSYqCKdHrEePfgg==",
+      "sha512": "4vD/wqUrTNId+NLbuuecA726Znax2WIBRfmdn0HTJmxPn7UyHpKGE/9BxUlBnwns+leiE5yfu4vK8DkezXBBHA==",
       "type": "package",
       "path": "microsoft.maui.graphics.win2d.winui.desktop/9.0.82",
       "files": [
@@ -23744,7 +23710,7 @@
       ]
     },
     "Microsoft.Maui.Resizetizer/9.0.82": {
-      "sha512": "p1gLypMt1WPWIYlRQIiECZFhTSENVv0ZYPyT5H40wDsg6gD0R4m+z8z4IJWFCdQjIekqhCz1c/4JSBQDpJHO2A==",
+      "sha512": "eHBUq0ksfpZ/HkZPUMYJzdggAgIIxHa7a58avqUJ0HBtDWR1cLll2Reyu1Tyylwg0XdK/SzdFF2tVJfVSpThcA==",
       "type": "package",
       "path": "microsoft.maui.resizetizer/9.0.82",
       "files": [
@@ -23799,10 +23765,10 @@
         "microsoft.maui.resizetizer.nuspec"
       ]
     },
-    "Microsoft.NET.ILLink.Tasks/9.0.9": {
-      "sha512": "cHi1os/s6aobEgNkbOh/jW+ru//rHuedvj4PmTh2mMY7et/mJjqphBeXeKCesDvMd0+E2JyX9EPZZC4VRKslXg==",
+    "Microsoft.NET.ILLink.Tasks/9.0.5": {
+      "sha512": "4L7wbb3Y4BJgIeSnmAf/C6S/qCs9rT1b0dX72uj3qo0qvUH7D0U1tU5ZlC7A3Wb8E/dXK4caOi4JkdLTVJaXhw==",
       "type": "package",
-      "path": "microsoft.net.illink.tasks/9.0.9",
+      "path": "microsoft.net.illink.tasks/9.0.5",
       "hasTools": true,
       "files": [
         ".nupkg.metadata",
@@ -23816,7 +23782,7 @@
         "build/Microsoft.NET.ILLink.Analyzers.props",
         "build/Microsoft.NET.ILLink.Tasks.props",
         "build/Microsoft.NET.ILLink.targets",
-        "microsoft.net.illink.tasks.9.0.9.nupkg.sha512",
+        "microsoft.net.illink.tasks.9.0.5.nupkg.sha512",
         "microsoft.net.illink.tasks.nuspec",
         "tools/net472/ILLink.Tasks.dll",
         "tools/net472/ILLink.Tasks.dll.config",
@@ -26577,19 +26543,19 @@
       "CommunityToolkit.Mvvm >= 8.4.0",
       "Microsoft.Extensions.Logging.Debug >= 9.0.5",
       "Microsoft.Maui.Controls >= 9.0.82",
-      "Microsoft.NET.ILLink.Tasks >= 9.0.9"
+      "Microsoft.NET.ILLink.Tasks >= 9.0.5"
     ],
     "net9.0-ios18.5": [
       "CommunityToolkit.Mvvm >= 8.4.0",
       "Microsoft.Extensions.Logging.Debug >= 9.0.5",
       "Microsoft.Maui.Controls >= 9.0.82",
-      "Microsoft.NET.ILLink.Tasks >= 9.0.9"
+      "Microsoft.NET.ILLink.Tasks >= 9.0.5"
     ],
     "net9.0-maccatalyst18.5": [
       "CommunityToolkit.Mvvm >= 8.4.0",
       "Microsoft.Extensions.Logging.Debug >= 9.0.5",
       "Microsoft.Maui.Controls >= 9.0.82",
-      "Microsoft.NET.ILLink.Tasks >= 9.0.9"
+      "Microsoft.NET.ILLink.Tasks >= 9.0.5"
     ],
     "net9.0-windows10.0.19041": [
       "CommunityToolkit.Mvvm >= 8.4.0",
@@ -26598,24 +26564,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\derie\\.nuget\\packages\\": {},
+    "C:\\Users\\lenovo\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\derie\\Documentos\\appointex\\appointex\\appointex.csproj",
+      "projectUniqueName": "C:\\Users\\lenovo\\Desktop\\AppOintex\\appointex.csproj",
       "projectName": "appointex",
-      "projectPath": "C:\\Users\\derie\\Documentos\\appointex\\appointex\\appointex.csproj",
-      "packagesPath": "C:\\Users\\derie\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\derie\\Documentos\\appointex\\appointex\\obj\\",
+      "projectPath": "C:\\Users\\lenovo\\Desktop\\AppOintex\\appointex.csproj",
+      "packagesPath": "C:\\Users\\lenovo\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\lenovo\\Desktop\\AppOintex\\obj\\",
       "projectStyle": "PackageReference",
       "crossTargeting": true,
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\derie\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\lenovo\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -26679,7 +26645,7 @@
           "Microsoft.NET.ILLink.Tasks": {
             "suppressParent": "All",
             "target": "Package",
-            "version": "[9.0.9, )",
+            "version": "[9.0.5, )",
             "autoReferenced": true
           }
         },
@@ -26694,6 +26660,12 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
+        "downloadDependencies": [
+          {
+            "name": "Microsoft.NETCore.App.Ref",
+            "version": "[9.0.9, 9.0.9]"
+          }
+        ],
         "frameworkReferences": {
           "Microsoft.Android": {
             "privateAssets": "all"
@@ -26702,7 +26674,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.305/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.300/PortableRuntimeIdentifierGraph.json"
       },
       "net9.0-ios18.5": {
         "targetAlias": "net9.0-ios",
@@ -26722,7 +26694,7 @@
           "Microsoft.NET.ILLink.Tasks": {
             "suppressParent": "All",
             "target": "Package",
-            "version": "[9.0.9, )",
+            "version": "[9.0.5, )",
             "autoReferenced": true
           }
         },
@@ -26737,6 +26709,12 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
+        "downloadDependencies": [
+          {
+            "name": "Microsoft.NETCore.App.Ref",
+            "version": "[9.0.9, 9.0.9]"
+          }
+        ],
         "frameworkReferences": {
           "Microsoft.iOS": {
             "privateAssets": "all"
@@ -26745,7 +26723,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.305/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.300/PortableRuntimeIdentifierGraph.json"
       },
       "net9.0-maccatalyst18.5": {
         "targetAlias": "net9.0-maccatalyst",
@@ -26765,7 +26743,7 @@
           "Microsoft.NET.ILLink.Tasks": {
             "suppressParent": "All",
             "target": "Package",
-            "version": "[9.0.9, )",
+            "version": "[9.0.5, )",
             "autoReferenced": true
           }
         },
@@ -26781,6 +26759,12 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
+        "downloadDependencies": [
+          {
+            "name": "Microsoft.NETCore.App.Ref",
+            "version": "[9.0.9, 9.0.9]"
+          }
+        ],
         "frameworkReferences": {
           "Microsoft.MacCatalyst": {
             "privateAssets": "all"
@@ -26789,7 +26773,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.305/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.300/PortableRuntimeIdentifierGraph.json"
       },
       "net9.0-windows10.0.19041": {
         "targetAlias": "net9.0-windows10.0.19041.0",
@@ -26832,7 +26816,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.305\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.300\\RuntimeIdentifierGraph.json"
       }
     },
     "runtimes": {

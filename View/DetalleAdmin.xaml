@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="appointex.View.DetalleAdmin"
+             Title="Gestión de Servicio"
+             BackgroundColor="White">
+
+    <Grid RowDefinitions="Auto, *, Auto" RowSpacing="0" Padding="20">
+
+        <!-- Botón de regreso -->
+        <ImageButton Grid.Row="0"
+                     Command="{Binding GoBackCommand}"
+                     HeightRequest="40" 
+                     WidthRequest="40"
+                     HorizontalOptions="Start" 
+                     VerticalOptions="Start"
+                     Margin="0, 20, 0, 20">
+            <ImageButton.Source>
+                <FileImageSource File="flecha_atras.png" />
+            </ImageButton.Source>
+        </ImageButton>
+
+        <ScrollView Grid.Row="1">
+            <VerticalStackLayout Spacing="25" Margin="0, 0, 0, 20">
+
+                <!-- Título Principal -->
+                <Label Text="Servicio solicitado" 
+                       FontSize="Large" 
+                       FontAttributes="Bold" />
+
+                <!-- Detalle del Servicio -->
+                <VerticalStackLayout Spacing="10">
+                    <Label Text="Limpieza del hogar" 
+                           FontSize="Title" 
+                           FontAttributes="Bold" />
+                </VerticalStackLayout>
+
+                <!-- Fecha y Hora -->
+                <VerticalStackLayout Spacing="5">
+                    <Label Text="Fecha y hora" 
+                           FontSize="Medium" 
+                           TextColor="#555555" />
+                    <Label Text="25/11/2025 2:30 p. m." 
+                           FontSize="Large" 
+                           FontAttributes="Bold" />
+                </VerticalStackLayout>
+
+                <!-- Nota del Cliente -->
+                <VerticalStackLayout Spacing="10">
+                    <Label Text="Nota" 
+                           FontSize="Medium" 
+                           TextColor="#555555" />
+                    <Label Text="Hola, quiero solicitar un servicio de limpieza general para mi apartamento de dos habitaciones..." 
+                           FontSize="Medium" 
+                           LineHeight="1.2" />
+                </VerticalStackLayout>
+
+                <!-- Estado Actual -->
+                <VerticalStackLayout Spacing="10">
+                    <Label Text="Estado actual: Pendiente" 
+                           FontSize="Medium" 
+                           FontAttributes="Bold" />
+                </VerticalStackLayout>
+
+                <!-- Cambiar Estado (Botones de Segmento) -->
+                <VerticalStackLayout Spacing="10">
+                    <Label Text="Cambiar estado" 
+                           FontSize="Medium" 
+                           TextColor="#555555" />
+                    <FlexLayout JustifyContent="SpaceBetween">
+                        <Button Text="Aprobado" CornerRadius="8" BackgroundColor="#E6FFE6" TextColor="#008000" FlexLayout.Basis="24%" />
+                        <Button Text="Pendiente" CornerRadius="8" BackgroundColor="#FFFFE0" TextColor="#8B8000" FlexLayout.Basis="24%" />
+                        <Button Text="Rechazado" CornerRadius="8" BackgroundColor="#FFE6E6" TextColor="#8B0000" FlexLayout.Basis="24%" />
+                        <Button Text="Cancelado" CornerRadius="8" BackgroundColor="#EEEEEE" TextColor="#555555" FlexLayout.Basis="24%" />
+                    </FlexLayout>
+                </VerticalStackLayout>
+
+                <!-- Botón de Completado -->
+                <Button Text="Completado"
+                        FontAttributes="Bold"
+                        FontSize="Large"
+                        HeightRequest="55"
+                        CornerRadius="10"
+                        BackgroundColor="#7CFC00"
+                        TextColor="Black"
+                        Command="{Binding CompletarServicioCommand}"
+                        Margin="0, 10, 0, 0"/>
+
+                <!-- Nota del Administrador (opcional) -->
+                <VerticalStackLayout Spacing="10">
+                    <Label Text="Nota: añadir nombre del solicitante" 
+                           FontSize="Small" 
+                           TextColor="#FFD700" 
+                           FontAttributes="Italic" />
+                </VerticalStackLayout>
+
+            </VerticalStackLayout>
+        </ScrollView>
+    </Grid>
+</ContentPage>
