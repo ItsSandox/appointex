@@ -10,5 +10,8 @@ public partial class AppShell : Shell
 		    Routing.RegisterRoute(nameof(LoginPage), typeof(LoginPage));
             Routing.RegisterRoute(nameof(CreateAccountClientPage), typeof(CreateAccountClientPage));
             Routing.RegisterRoute(nameof(CreateAccountPartnerPage), typeof(CreateAccountPartnerPage));
+			Routing.RegisterRoute(nameof(CrearServicio), typeof(CrearServicio));
+			Routing.RegisterRoute(nameof(Solicitar), typeof(Solicitar));
+			Routing.RegisterRoute(nameof(AppointmentDetailsPage), typeof(AppointmentDetailsPage));
 	}
 }

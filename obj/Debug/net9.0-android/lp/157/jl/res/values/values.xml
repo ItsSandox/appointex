@@ -1,1 +1,10 @@
-<resources><item name="maui_custom_view_target_running_callbacks_tag" type="id" /><string name="maui_empty_unused" /></resources>
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr format="reference" name="drawerLayoutStyle"/>
+    <attr format="dimension" name="elevation"/>
+    <dimen name="def_drawer_elevation">10dp</dimen>
+    <declare-styleable name="DrawerLayout">
+        
+        <attr name="elevation"/>
+    </declare-styleable>
+</resources>

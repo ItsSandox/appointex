@@ -18,6 +18,10 @@ packages/
 local.properties
 appsettings.Development.json
 
+# --- Sensitive Data / Claves (NUEVO) ---
+apikeys.cs
+google-services.json
+
 ## --- Mac / iOS Specific ---
 .DS_Store
 *.swp

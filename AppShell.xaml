@@ -9,9 +9,13 @@
     Shell.TabBarTitleColor="Black" 
     Shell.TabBarUnselectedColor="Gray"
     Shell.TabBarForegroundColor="#ffd917">
-    
-    <TabBar x:Name ="BottomTabBar">
+    <ShellContent
+        ContentTemplate="{DataTemplate local:InicioPage}"
+        Route="InicioPage"
+        Shell.NavBarIsVisible="False"
+        Shell.TabBarIsVisible="False" />
 
+    <TabBar x:Name ="BottomTabBar">
            <ShellContent
             Icon="dashboard.png" 
             Route="DashboardPage" 

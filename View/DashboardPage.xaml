@@ -2,14 +2,192 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:vm="clr-namespace:appointex.ViewModels"
+             xmlns:models="clr-namespace:appointex.Models"
              x:Class="appointex.DashboardPage"
-             Shell.NavBarIsVisible="False"> 
+             Shell.NavBarIsVisible="False">
 
-    <ScrollView>
-        <Label Text="Dashboard Cliente"
-               FontSize="26"
-               FontFamily="Montserrat-SemiBold"
-               HorizontalOptions="Center"
-               VerticalOptions="CenterAndExpand"/>
-    </ScrollView>
+    <Grid>
+
+        <RefreshView Grid.Row="0"
+                     Command="{Binding RefreshCommand}"
+                     IsRefreshing="{Binding IsRefreshing}"
+                     RefreshColor="#ffd917">
+
+            <ScrollView>
+                <Grid RowDefinitions="Auto, Auto, *"
+                      Margin="15,50,0,0">
+
+                    <Grid Grid.Row="0"
+                          ColumnDefinitions="Auto, Auto, *"
+                          Margin="0,0,15,0">
+                        <Border Grid.Column="0"
+                                StrokeShape="Ellipse"
+                                HeightRequest="50"
+                                WidthRequest="50"
+                                StrokeThickness="0">
+                            <Image Source="{Binding UserProfilePhoto}"
+                                   Aspect="AspectFill"/>
+                        </Border>
+
+                        <VerticalStackLayout Grid.Column="1"
+                                             Margin="10,0,0,0"
+                                             VerticalOptions="Center">
+                            <Label Text="¡Hola!"
+                                   FontSize="16"
+                                   FontFamily="Montserrat-Regular"/>
+                            <Label Text="{Binding UserName}"
+                                   FontSize="16"
+                                   FontFamily="Montserrat-Bold"/>
+                        </VerticalStackLayout>
+
+                        <Border Grid.Column="2"
+                                BackgroundColor="#f5f5f5"
+                                StrokeShape="Ellipse"
+                                HeightRequest="40"
+                                WidthRequest="40"
+                                HorizontalOptions="End"
+                                StrokeThickness="0">
+                            <ImageButton Source="notificacion.png"
+                                         HeightRequest="25"/>
+                        </Border>
+                    </Grid>
+
+                    <Border Grid.Row="1"
+                            Margin="0,20,15,20"
+                            BackgroundColor="#f5f5f5"
+                            StrokeThickness="0"
+                            HeightRequest="50"
+                            Padding="15,0">
+                        <Border.StrokeShape>
+                            <RoundRectangle CornerRadius="25"/>
+                        </Border.StrokeShape>
+                        <Grid ColumnDefinitions="Auto, *">
+                            <Image Grid.Column="0"
+                                   Source="lupa.png"
+                                   HeightRequest="20"
+                                   Opacity="0.5"
+                                   Margin="0,0,10,0"/>
+                            <Entry Grid.Column="1"
+                                   Margin="0,5,0,0"
+                                   Placeholder="Buscar servicio..."
+                                   FontFamily="Montserrat-Medium"
+                                   TextColor="Black"
+                                   PlaceholderColor="Gray"/>
+                        </Grid>
+                    </Border>
+
+                    <CollectionView Grid.Row="2"
+                                    ItemsSource="{Binding Services}"
+                                    Margin="0,0,15,90">
+                        <CollectionView.EmptyView>
+                            <StackLayout VerticalOptions="Center"
+                                         HorizontalOptions="Center"
+                                         Margin="0,50,0,0">
+                                <Label Text="{Binding EmptyStateMessage}"
+                                       FontFamily="Montserrat-Regular"
+                                       FontSize="16"
+                                       TextColor="Gray"
+                                       HorizontalTextAlignment="Center"
+                                       WidthRequest="250"/>
+                            </StackLayout>
+                        </CollectionView.EmptyView>
+
+                        <CollectionView.ItemTemplate>
+                            <DataTemplate x:DataType="models:AppService">
+                                <Border Margin="0,0,0,15"
+                                        BackgroundColor="#f5f5f5"
+                                        StrokeThickness="0"
+                                        Padding="10,5">
+                                    <Border.StrokeShape>
+                                        <RoundRectangle CornerRadius="15"/>
+                                    </Border.StrokeShape>
+
+                                    <Grid ColumnDefinitions="80, *, Auto"
+                                          ColumnSpacing="10">
+                                        <Border Grid.Column="0"
+                                                StrokeShape="RoundRectangle 10"
+                                                HeightRequest="80"
+                                                StrokeThickness="0"
+                                                WidthRequest="80">
+                                            <Image Source="{Binding ServicePhoto}"
+                                                   Aspect="AspectFill"/>
+                                        </Border>
+
+                                        <VerticalStackLayout Grid.Column="1"
+                                                             VerticalOptions="Center"
+                                                             Spacing="1">
+                                            <Label Text="{Binding Name}"
+                                                   FontFamily="Montserrat-Bold"
+                                                   FontSize="16"
+                                                   LineBreakMode="TailTruncation"/>
+
+                                            <Label Text="{Binding User.Username, StringFormat='Por {0}'}"
+                                                   FontFamily="Montserrat-Regular"
+                                                   FontSize="12"
+                                                   TextColor="Gray"/>
+
+                                            <HorizontalStackLayout Spacing="0"
+                                                                   Margin="0,0,0,0">
+                                                <Image Source="tiempo.png"
+                                                       HeightRequest="14"
+                                                       Margin="0,0,3,0"
+                                                       VerticalOptions="Center"/>
+                                                <Label Text="{Binding Duration, StringFormat='{0:hh}h {0:mm}min'}"
+                                                       FontSize="14"
+                                                       Margin="0,0,3,0"
+                                                       FontFamily="Montserrat-Medium"/>
+                                            </HorizontalStackLayout>
+                                            <HorizontalStackLayout Spacing="0"
+                                                                   Margin="0,0,0,0">
+                                            <Image Source="dinero.png"
+                                                   HeightRequest="14"
+                                                   Margin="0,0,3,0"
+                                                   VerticalOptions="Center"/>
+                                            <Label Text="{Binding Price, StringFormat='{0:F2}'}"
+                                                   FontSize="14"
+                                                   FontFamily="Montserrat-Medium"
+                                                   TextColor="Black"/>
+                                            </HorizontalStackLayout>
+                                        </VerticalStackLayout>
+
+                                        <Button Grid.Column="2"
+                                                Text="Solicitar"
+                                                Command="{Binding Source={RelativeSource AncestorType={x:Type vm:DashboardViewModel}}, Path=RequestServiceCommand}"
+                                                CommandParameter="{Binding .}"
+                                                BackgroundColor="#ffd917"
+                                                TextColor="Black"
+                                                FontFamily="Montserrat-SemiBold"
+                                                FontSize="14"
+                                                HeightRequest="35"
+                                                Padding="10,0"
+                                                CornerRadius="18"
+                                                VerticalOptions="Center"/>
+                                    </Grid>
+                                </Border>
+                            </DataTemplate>
+                        </CollectionView.ItemTemplate>
+                    </CollectionView>
+
+                </Grid>
+            </ScrollView>
+        </RefreshView>
+
+        <ImageButton Source="agregar.png"
+                     Command="{Binding AddServiceCommand}"
+                     IsVisible="{Binding IsAddButtonVisible}"
+                     HeightRequest="80"
+                     WidthRequest="80"
+                     HorizontalOptions="End"
+                     VerticalOptions="End"
+                     Margin="0,0,-19,30"/>
+
+        <ActivityIndicator IsRunning="{Binding IsBusy}"
+                           IsVisible="{Binding IsBusy}"
+                           Color="#ffd917"
+                           VerticalOptions="Center"
+                           HorizontalOptions="Center"
+                           HeightRequest="50"
+                           WidthRequest="50"
+                           BackgroundColor="Transparent"/>
+    </Grid>
 </ContentPage>

@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:appointex.ViewModels"
+             x:Class="appointex.Solicitar"
+             Shell.NavBarIsVisible="False"
+             Shell.TabBarIsVisible="False">
+
+    <Grid RowDefinitions="*, Auto">
+
+        <ScrollView Grid.Row="0"
+                    VerticalScrollBarVisibility="Never">
+            <VerticalStackLayout Spacing="0">
+                <Grid HeightRequest="300">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="30"/>
+                    </Grid.RowDefinitions>
+
+                    <CarouselView Grid.RowSpan="2"
+                                  ItemsSource="{Binding ServiceImages}"
+                                  IndicatorView="indicatorView">
+                        <CarouselView.ItemTemplate>
+                            <DataTemplate>
+                                <Image Source="{Binding .}"
+                                       Aspect="AspectFill"
+                                       HeightRequest="300"/>
+                            </DataTemplate>
+                        </CarouselView.ItemTemplate>
+                    </CarouselView>
+
+                    <Border Grid.Row="1"
+                            BackgroundColor="White"
+                            StrokeThickness="0"
+                            VerticalOptions="End"
+                            HeightRequest="30">
+                        <Border.StrokeShape>
+                            <RoundRectangle CornerRadius="30,30,0,0"/>
+                        </Border.StrokeShape>
+                    </Border>
+
+                    <IndicatorView x:Name="indicatorView"
+                                   Grid.Row="1"
+                                   IndicatorColor="LightGray"
+                                   SelectedIndicatorColor="#ffd917"
+                                   HorizontalOptions="Center"
+                                   VerticalOptions="Center"
+                                   Margin="0,0,0,10"/>
+                </Grid>
+
+                <VerticalStackLayout Padding="20,10,20,30"
+                                     Spacing="20"
+                                     BackgroundColor="White">
+                    <Grid ColumnDefinitions="*, Auto">
+                        <Label Grid.Column="0"
+                               Text="{Binding ServiceName}"
+                               FontSize="24"
+                               FontFamily="Montserrat-Bold"
+                               TextColor="Black"/>
+                        <Label Grid.Column="1"
+                               Text="{Binding ServicePrice, StringFormat='${0:F0}'}"
+                               FontSize="24"
+                               FontFamily="Montserrat-Bold"
+                               TextColor="Green"
+                               VerticalOptions="Center"/>
+                    </Grid>
+
+                    <HorizontalStackLayout Spacing="10">
+                        <Border StrokeShape="Ellipse"
+                                HeightRequest="40"
+                                WidthRequest="40"
+                                StrokeThickness="0">
+                            <Image Source="{Binding PartnerPhoto}"
+                                   Aspect="AspectFill"/>
+                        </Border>
+                        <VerticalStackLayout Spacing="0"
+                                             VerticalOptions="Center">
+                            <Label Text="{Binding PartnerName}"
+                                   FontFamily="Montserrat-SemiBold"
+                                   FontSize="14"/>
+                            <Label Text="{Binding PartnerProfession}"
+                                   FontSize="12"
+                                   TextColor="Gray"/>
+                        </VerticalStackLayout>
+                    </HorizontalStackLayout>
+
+                    <Label Text="{Binding ServiceDescription}"
+                           FontSize="15"
+                           TextColor="#535862"
+                           FontFamily="Montserrat-Regular"/>
+                    <BoxView HeightRequest="1"
+                             Color="#f0f0f0"/>
+
+                    <Label Text="Configura tu cita"
+                           FontFamily="Montserrat-Bold"
+                           FontSize="18"
+                           Margin="0,10,0,0"/>
+
+                    <Grid ColumnDefinitions="*, *"
+                          ColumnSpacing="15">
+                        <Border Grid.Column="0"
+                                BackgroundColor="#f5f5f5"
+                                StrokeThickness="0"
+                                HeightRequest="55"
+                                Padding="10,0">
+                            <Border.StrokeShape>
+                                <RoundRectangle CornerRadius="15"/>
+                            </Border.StrokeShape>
+                            <DatePicker Date="{Binding SelectedDate}"
+                                        Format="dd/MM/yyyy"
+                                        FontSize="16"
+                                        VerticalOptions="Center"
+                                        TextColor="Black"
+                                        FontFamily="Montserrat-Medium"/>
+                        </Border>
+                        <Border Grid.Column="1"
+                                BackgroundColor="#f5f5f5"
+                                StrokeThickness="0"
+                                HeightRequest="55"
+                                Padding="10,0">
+                            <Border.StrokeShape>
+                                <RoundRectangle CornerRadius="15"/>
+                            </Border.StrokeShape>
+                            <TimePicker Time="{Binding SelectedTime}"
+                                        TextColor="Black"
+                                        FontSize="16"
+                                        VerticalOptions="Center"
+                                        FontFamily="Montserrat-Medium"/>
+                        </Border>
+                    </Grid>
+
+                    <Border BackgroundColor="#f5f5f5"
+                            StrokeThickness="0"
+                            HeightRequest="100"
+                            Padding="10">
+                        <Border.StrokeShape>
+                            <RoundRectangle CornerRadius="15"/>
+                        </Border.StrokeShape>
+                        <Editor Placeholder="Nota para el socio (Opcional)"
+                                Text="{Binding Note}"
+                                TextColor="Black"
+                                PlaceholderColor="Gray"
+                                FontFamily="Montserrat-Medium"
+                                AutoSize="TextChanges"/>
+                    </Border>
+                </VerticalStackLayout>
+            </VerticalStackLayout>
+        </ScrollView>
+
+        <ImageButton Source="flecha_atras.png"
+                     Command="{Binding BackCommand}"
+                     Grid.Row="0"
+                     HorizontalOptions="Start"
+                     VerticalOptions="Start"
+                     HeightRequest="40"
+                     WidthRequest="40"
+                     Margin="20,40,0,0"
+                     BackgroundColor="#ffd917"
+                     CornerRadius="20"
+                     Padding="10">
+            <ImageButton.Shadow>
+                <Shadow Brush="Black"
+                        Offset="2,2"
+                        Opacity="0.2"/>
+            </ImageButton.Shadow>
+        </ImageButton>
+
+        <Border Grid.Row="1"
+                BackgroundColor="White"
+                Padding="20,10,20,30"
+                StrokeThickness="0"
+                Shadow="{Shadow Brush=Black, Offset='0,-5', Opacity=0.05}">
+            <Grid>
+                <Button Text="Confirmar Solicitud"
+                        Command="{Binding RequestCommand}"
+                        FontFamily="Montserrat-SemiBold"
+                        FontSize="18"
+                        HeightRequest="60"
+                        CornerRadius="30"
+                        BackgroundColor="#ffd917"
+                        TextColor="Black"/>
+                <ActivityIndicator IsRunning="{Binding IsBusy}"
+                                   IsVisible="{Binding IsBusy}"
+                                   Color="#ffd917"
+                                   HorizontalOptions="Center"
+                                   VerticalOptions="Center"/>
+            </Grid>
+        </Border>
+
+    </Grid>
+</ContentPage>

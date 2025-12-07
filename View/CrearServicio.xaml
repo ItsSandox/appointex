@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:appointex.ViewModels"
+             x:Class="appointex.CrearServicio"
+             Shell.NavBarIsVisible="False"
+             Shell.TabBarIsVisible="False">
+
+    <ScrollView>
+        <Border BackgroundColor="#ffd917"
+                StrokeThickness="0">
+            <Grid Padding="0,30,0,0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <StackLayout Grid.Row="0">
+                    <ImageButton Source="flecha_atras.png"
+                                 Command="{Binding BackCommand}"
+                                 HeightRequest="30"
+                                 WidthRequest="30"
+                                 Margin="15,0,0,0"
+                                 HorizontalOptions="Start"/>
+
+                    <Label Text="Nuevo Servicio"
+                           FontSize="26"
+                           FontFamily="Montserrat-SemiBold"
+                           Margin="15,15,15,6"/>
+
+                    <Label Text="Completa los detalles para publicar tu servicio."
+                           FontSize="15"
+                           FontFamily="Montserrat-Regular"
+                           Margin="15,0,15,20"
+                           HorizontalOptions="Start"/>
+                </StackLayout>
+
+                <Border Grid.Row="1"
+                        BackgroundColor="White"
+                        StrokeThickness="0">
+                    <Border.StrokeShape>
+                        <RoundRectangle CornerRadius="50,50,0,0"/>
+                    </Border.StrokeShape>
+
+                    <VerticalStackLayout Padding="20,40,20,0"
+                                         Spacing="15">
+
+                        <Border BackgroundColor="#f5f5f5"
+                                StrokeThickness="0"
+                                HeightRequest="60"
+                                Padding="15,0">
+                            <Border.StrokeShape>
+                                <RoundRectangle CornerRadius="30"/>
+                            </Border.StrokeShape>
+                            <Entry Placeholder="Título del servicio"
+                                   Text="{Binding Name}"
+                                   TextColor="Black"
+                                   FontSize="16"
+                                   VerticalOptions="Center"
+                                   FontFamily="Montserrat-Medium"
+                                   PlaceholderColor="#535862"/>
+                        </Border>
+
+                        <Border BackgroundColor="#f5f5f5"
+                                StrokeThickness="0"
+                                HeightRequest="120"
+                                Padding="15,10">
+                            <Border.StrokeShape>
+                                <RoundRectangle CornerRadius="30"/>
+                            </Border.StrokeShape>
+                            <Editor Placeholder="Descripción detallada..."
+                                    Text="{Binding Description}"
+                                    TextColor="Black"
+                                    FontSize="16"
+                                    FontFamily="Montserrat-Medium"
+                                    PlaceholderColor="#535862"
+                                    AutoSize="TextChanges"/>
+                        </Border>
+
+                        <Grid ColumnDefinitions="*, *"
+                              ColumnSpacing="10">
+                            <Border Grid.Column="0"
+                                    BackgroundColor="#f5f5f5"
+                                    StrokeThickness="0"
+                                    HeightRequest="60"
+                                    Padding="15,0">
+                                <Border.StrokeShape>
+                                    <RoundRectangle CornerRadius="30"/>
+                                </Border.StrokeShape>
+                                <Entry Placeholder="Precio ($)"
+                                       Text="{Binding Price}"
+                                       Keyboard="Numeric"
+                                       FontSize="16"
+                                       VerticalOptions="Center"
+                                       TextColor="Black"
+                                       FontFamily="Montserrat-Medium"
+                                       PlaceholderColor="#535862"/>
+                            </Border>
+
+                            <Border Grid.Column="1"
+                                    BackgroundColor="#f5f5f5"
+                                    StrokeThickness="0"
+                                    HeightRequest="60"
+                                    Padding="15,0">
+                                <Border.StrokeShape>
+                                    <RoundRectangle CornerRadius="30"/>
+                                </Border.StrokeShape>
+                                <TimePicker Time="{Binding Duration}"
+                                            TextColor="Black"
+                                            FontSize="16"
+                                            VerticalOptions="Center"
+                                            FontFamily="Montserrat-Medium"
+                                            Format="HH:mm"/>
+                            </Border>
+                        </Grid>
+                        <Label Text="Duración (Horas : Minutos)"
+                               FontSize="12"
+                               TextColor="Gray"
+                               HorizontalOptions="End"
+                               FontFamily="Montserrat-Regular"
+                               Margin="0,-10,15,0"/>
+
+                        <Border HeightRequest="60"
+                                BackgroundColor="White"
+                                Stroke="#f5f5f5"
+                                StrokeThickness="2"
+                                Padding="15,0">
+                            <Border.StrokeShape>
+                                <RoundRectangle CornerRadius="30"/>
+                            </Border.StrokeShape>
+                            <Border.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding PickImageCommand}"/>
+                            </Border.GestureRecognizers>
+
+                            <Grid ColumnDefinitions="*, Auto">
+                                <Label Text="Foto del servicio"
+                                       FontSize="16"
+                                       TextColor="#535862"
+                                       VerticalOptions="Center"
+                                       FontFamily="Montserrat-Medium"/>
+
+                                <Image Grid.Column="1"
+                                       Source="{Binding ServicePhotoDisplay}"
+                                       HeightRequest="40"
+                                       WidthRequest="40"
+                                       Aspect="AspectFill"
+                                       VerticalOptions="Center">
+                                    <Image.Clip>
+                                        <EllipseGeometry Center="20,20"
+                                                         RadiusX="20"
+                                                         RadiusY="20"/>
+                                    </Image.Clip>
+                                </Image>
+                            </Grid>
+                        </Border>
+
+
+
+                        <ActivityIndicator IsRunning="{Binding IsBusy}"
+                                           IsVisible="{Binding IsBusy}"
+                                           Color="#ffd917"/>
+                    </VerticalStackLayout>
+                </Border>
+                        <Button Text="Publicar Servicio"
+                                Grid.Row="1"
+                                Command="{Binding CreateServiceCommand}"
+                                BackgroundColor="Black"
+                                VerticalOptions="End"
+                                TextColor="White"
+                                FontFamily="Montserrat-SemiBold"
+                                FontSize="18"
+                                CornerRadius="30"
+                                HeightRequest="60"
+                                Margin="20,20,20,20"/>
+            </Grid>
+        </Border>
+    </ScrollView>
+</ContentPage>

@@ -4,9 +4,16 @@ namespace appointex;
 
 public partial class DashboardPage : ContentPage
 {
-	public DashboardPage()
+	private readonly DashboardViewModel _viewModel;
+	public DashboardPage(DashboardViewModel viewModel)
 	{
 		InitializeComponent();
-		//BindingContext = new InicioViewModel();
+		BindingContext = _viewModel = viewModel;
+	}
+	protected override async void OnAppearing()
+	{
+		base.OnAppearing();
+		// Carga los datos cada vez que entras a la pantalla
+		await _viewModel.InitializeAsync();
 	}
 }

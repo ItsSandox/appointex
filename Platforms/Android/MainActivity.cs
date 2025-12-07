@@ -12,6 +12,7 @@ namespace appointex // He actualizado el namespace para coincidir con tu XAML
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
+            CreateNotificationChannel();
 
             // Lógica para hacer la barra de navegación y estado transparentes y extender el contenido
             MakeStatusBarAndNavigationBarTransparent();
@@ -48,6 +49,24 @@ namespace appointex // He actualizado el namespace para coincidir con tu XAML
                     windowInsetsController.AppearanceLightNavigationBars = true; 
                     windowInsetsController.AppearanceLightStatusBars = true;
                 }
+            }
+        }
+        private void CreateNotificationChannel()
+        {
+            if (Build.VERSION.SdkInt >= BuildVersionCodes.O)
+            {
+                var channelId = "default"; // Debe coincidir con el del Manifest
+                var channelName = "Notificaciones Generales";
+                var channelDescription = "Avisos de citas y servicios";
+                var channelImportance = NotificationImportance.High;
+
+                var channel = new NotificationChannel(channelId, channelName, channelImportance)
+                {
+                    Description = channelDescription
+                };
+                
+                var notificationManager = (NotificationManager)GetSystemService(NotificationService);
+                notificationManager.CreateNotificationChannel(channel);
             }
         }
     }

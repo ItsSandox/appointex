@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:appointex.ViewModels"
+             xmlns:models="clr-namespace:appointex.Models"
+             x:Class="appointex.AppointmentDetailsPage"
+             Shell.NavBarIsVisible="False"
+             Shell.TabBarIsVisible="False">
+
+    <ScrollView>
+        <Border BackgroundColor="#ffd917"
+                StrokeThickness="0">
+            <Grid Padding="0,30,0,0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <StackLayout Grid.Row="0">
+                    <ImageButton Source="flecha_atras.png"
+                                 Command="{Binding GoBackCommand}"
+                                 HeightRequest="30"
+                                 WidthRequest="30"
+                                 Margin="15,0,0,0"
+                                 HorizontalOptions="Start"/>
+
+                    <Label Text="Detalle de Cita"
+                           FontSize="26"
+                           FontFamily="Montserrat-SemiBold"
+                           Margin="15,15,15,6"/>
+
+                    <Label Text="Información completa del servicio."
+                           FontSize="15"
+                           FontFamily="Montserrat-Regular"
+                           Margin="15,0,15,20"
+                           HorizontalOptions="Start"/>
+                </StackLayout>
+
+                <Border Grid.Row="1"
+                        BackgroundColor="White"
+                        StrokeThickness="0"
+                        VerticalOptions="FillAndExpand">
+                    <Border.StrokeShape>
+                        <RoundRectangle CornerRadius="50,50,0,0"/>
+                    </Border.StrokeShape>
+
+                    <VerticalStackLayout Padding="20,40,20,30"
+                            Spacing="25">
+
+                        <Grid ColumnDefinitions="60, *">
+                            <Border Grid.Column="0"
+                                    StrokeShape="Ellipse"
+                                    HeightRequest="60"
+                                    WidthRequest="60"
+                                    StrokeThickness="0">
+                                <Image Source="{Binding OtherPartyPhoto}"
+                                       Aspect="AspectFill"/>
+                            </Border>
+
+                            <VerticalStackLayout Grid.Column="1"
+                                                 VerticalOptions="Center"
+                                                 Margin="15,0,0,0"
+                                                 Spacing="2">
+                                <Label Text="{Binding OtherPartyName}"
+                                       FontFamily="Montserrat-Bold"
+                                       FontSize="18"
+                                       TextColor="Black"/>
+                                <Label Text="{Binding OtherPartyRole}"
+                                       FontSize="14"
+                                       TextColor="Gray"
+                                       FontFamily="Montserrat-Medium"/>
+                            </VerticalStackLayout>
+                        </Grid>
+
+                        <BoxView HeightRequest="1"
+                                Color="#f0f0f0"/>
+
+                        <VerticalStackLayout Spacing="5">
+                            <Label Text="Servicio"
+                                   FontSize="16"
+                                   TextColor="Black"
+                                   FontFamily="Montserrat-Bold"/>
+                            <Label Text="{Binding Appointment.Service.Name}"
+                                   FontSize="16"
+                                   FontFamily="Montserrat-Regular"
+                                   TextColor="#555555"/>
+                        </VerticalStackLayout>
+
+                        <VerticalStackLayout Spacing="5">
+                            <Label Text="Fecha y hora"
+                                   FontSize="16"
+                                   TextColor="Black"
+                                   FontFamily="Montserrat-Bold"/>
+                            <Border BackgroundColor="#f5f5f5"
+                                    StrokeThickness="0"
+                                    Padding="10,10"
+                                    HorizontalOptions="Start"
+                                    StrokeShape="RoundRectangle 10">
+                                <HorizontalStackLayout Spacing="8">
+                                    <Image Source="despertador.png"
+                                            HeightRequest="18"
+                                            Opacity="0.6"/>
+                                    <Label Text="{Binding Appointment.DateTime, StringFormat='{0:dd MMM yyyy • hh:mm tt}'}"
+                                           FontSize="16"
+                                           FontFamily="Montserrat-Regular"
+                                           TextColor="Black"/>
+                                </HorizontalStackLayout>
+                            </Border>
+                        </VerticalStackLayout>
+
+                        <VerticalStackLayout Spacing="8">
+                            <Label Text="Nota de solicitud"
+                                   FontSize="16"
+                                   TextColor="Black"
+                                   FontFamily="Montserrat-Bold"/>
+                            <Border BackgroundColor="#f5f5f5"
+                                    StrokeThickness="0"
+                                    Padding="10"
+                                    StrokeShape="RoundRectangle 15">
+                                <Label Text="{Binding Appointment.Note}"
+                                       FontSize="16"
+                                       LineHeight="1.2"
+                                       FontFamily="Montserrat-Regular"
+                                       TextColor="#333"/>
+                            </Border>
+                        </VerticalStackLayout>
+
+                        <VerticalStackLayout Spacing="8">
+                            <Label Text="Estado actual"
+                                   FontSize="16"
+                                   TextColor="Black"
+                                   FontFamily="Montserrat-Bold"/>
+
+                            <Border Stroke="{Binding Appointment.StatusColor}"
+                                    StrokeThickness="2"
+                                    BackgroundColor="Transparent"
+                                    StrokeShape="RoundRectangle 20"
+                                    Padding="20,8"
+                                    HorizontalOptions="Start">
+                                <Label Text="{Binding Appointment.StatusText}"
+                                       FontSize="16"
+                                       TextColor="{Binding Appointment.StatusColor}"
+                                       FontAttributes="Bold"
+                                       FontFamily="Montserrat-SemiBold"/>
+                            </Border>
+                        </VerticalStackLayout>
+
+                        <VerticalStackLayout Spacing="15"
+                                IsVisible="{Binding IsPartner}">
+
+                            <BoxView HeightRequest="1"
+                                    Color="#f0f0f0"
+                                    Margin="0,10"/>
+
+                            <Label Text="Gestionar Cita"
+                                   FontSize="16"
+                                   TextColor="Black"
+                                   FontFamily="Montserrat-Bold"/>
+
+                            <FlexLayout BindableLayout.ItemsSource="{Binding StatusOptions}"
+                                        Wrap="Wrap"
+                                        JustifyContent="Start"
+                                        Direction="Row"
+                                        AlignItems="Start">
+
+                                <BindableLayout.ItemTemplate>
+                                    <DataTemplate x:DataType="models:StatusOption">
+                                        <Border StrokeThickness="0"
+                                                BackgroundColor="{Binding Color}"
+                                                StrokeShape="RoundRectangle 20"
+                                                Padding="15,10"
+                                                Margin="0,0,6,10">
+                                            <Border.GestureRecognizers>
+                                                <TapGestureRecognizer Command="{Binding Source={RelativeSource AncestorType={x:Type vm:AppointmentDetailsViewModel}}, Path=ChangeStatusCommand}"
+                                                                      CommandParameter="{Binding .}"/>
+                                            </Border.GestureRecognizers>
+
+                                            <Label Text="{Binding Text}"
+                                                   TextColor="White"
+                                                   FontFamily="Montserrat-SemiBold"
+                                                   FontSize="14"/>
+                                        </Border>
+                                    </DataTemplate>
+                                </BindableLayout.ItemTemplate>
+                            </FlexLayout>
+                        </VerticalStackLayout>
+
+                    </VerticalStackLayout>
+                </Border>
+            </Grid>
+        </Border>
+    </ScrollView>
+</ContentPage>

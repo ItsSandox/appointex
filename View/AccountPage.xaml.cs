@@ -4,9 +4,15 @@ namespace appointex;
 
 public partial class AccountPage : ContentPage
 {
-	public AccountPage()
+	private readonly AccountViewModel _viewModel;
+	public AccountPage(AccountViewModel viewModel)
 	{
 		InitializeComponent();
-		//BindingContext = new InicioViewModel();
+		BindingContext = _viewModel = viewModel;
 	}
+	protected override async void OnAppearing()
+    {
+        base.OnAppearing();
+        await _viewModel.InitializeAsync();
+    }
 }

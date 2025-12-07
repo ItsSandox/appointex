@@ -55,6 +55,8 @@
                         </Border.StrokeShape>
                         <Entry Placeholder="Correo"
                                 TextColor="Black"
+                                Keyboard="Email"
+                                Text="{Binding Email}"
                                 HeightRequest="100"
                                 FontFamily="Montserrat-Medium"
                                 FontSize="16"
@@ -73,6 +75,9 @@
                         </Border.StrokeShape>
                         <Entry Placeholder="Contraseña"
                                 TextColor="Black"
+                                Text="{Binding Password}"
+                                Keyboard="Password"
+                                IsPassword="True"
                                 HeightRequest="100"
                                 FontFamily="Montserrat-Medium"
                                 FontSize="16"
@@ -84,6 +89,11 @@
                             HorizontalOptions="End"
                             Margin="15,20"
                             FontFamily="Montserrat-Medium"/>
+                    <ActivityIndicator IsRunning="{Binding IsBusy}"
+                                       IsVisible="{Binding IsBusy}"
+                                       Color="#ffd917"
+                                       HorizontalOptions="Center"
+                                       Margin="0,20,0,0"/>
                     </VerticalStackLayout>
                     <Button Text="Iniciar Sesión"
                             BackgroundColor="Black"

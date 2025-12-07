@@ -3,9 +3,9 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:vm="clr-namespace:appointex.ViewModels"
              x:Class="appointex.CreateAccountClientPage"
-             Shell.NavBarIsVisible="False"> 
+             Shell.NavBarIsVisible="False">
 
-<ScrollView>
+    <ScrollView>
         <Border BackgroundColor="#ffd917"
                 StrokeThickness="0">
             <Grid Padding="0,30,0,0">
@@ -39,92 +39,114 @@
                         <RoundRectangle CornerRadius="50,50,0,0"/>
                     </Border.StrokeShape>
                 </Border>
-                <Grid Grid.Row="1" RowDefinitions="Auto,*" Padding="0,0,0,30">
+                <Grid Grid.Row="1"
+                        RowDefinitions="Auto,*"
+                        Padding="0,0,0,30">
                     <VerticalStackLayout Grid.Row="0">
-                    <Border Grid.Row="1"
-                            HeightRequest="60"
-                            Margin="15,40,15,0"
-                            Padding="15"
-                            BackgroundColor="#f5f5f5"
-                            StrokeThickness="0"
-                            VerticalOptions="Start">
-                        <Border.StrokeShape>
-                            <RoundRectangle CornerRadius="30"/>
-                        </Border.StrokeShape>
-                        <Entry Placeholder="Nombre de usuario"
-                                TextColor="Black"
-                                HeightRequest="100"
-                                FontFamily="Montserrat-Medium"
-                                FontSize="16"
-                                PlaceholderColor="#535862"/>
-                    </Border>
-                    <Border Grid.Row="1"
-                            HeightRequest="60"
-                            Margin="15,10,15,0"
-                            Padding="15"
-                            BackgroundColor="#f5f5f5"
-                            StrokeThickness="0"
-                            VerticalOptions="Start">
-                        <Border.StrokeShape>
-                            <RoundRectangle CornerRadius="30"/>
-                        </Border.StrokeShape>
-                        <Entry Placeholder="Correo"
-                                TextColor="Black"
+                        <Border Grid.Row="1"
                                 HeightRequest="60"
-                                FontFamily="Montserrat-Medium"
-                                FontSize="16"
-                                PlaceholderColor="#535862"/>
-                    </Border>
+                                Margin="15,40,15,0"
+                                Padding="15"
+                                BackgroundColor="#f5f5f5"
+                                StrokeThickness="0"
+                                VerticalOptions="Start">
+                            <Border.StrokeShape>
+                                <RoundRectangle CornerRadius="30"/>
+                            </Border.StrokeShape>
+                            <Entry Placeholder="Nombre de usuario"
+                                   TextColor="Black"
+                                   Text="{Binding Username}"
+                                   HeightRequest="100"
+                                   FontFamily="Montserrat-Medium"
+                                   FontSize="16"
+                                   PlaceholderColor="#535862"/>
+                        </Border>
+                        <Border Grid.Row="1"
+                                HeightRequest="60"
+                                Margin="15,10,15,0"
+                                Padding="15"
+                                BackgroundColor="#f5f5f5"
+                                StrokeThickness="0"
+                                VerticalOptions="Start">
+                            <Border.StrokeShape>
+                                <RoundRectangle CornerRadius="30"/>
+                            </Border.StrokeShape>
+                            <Entry Placeholder="Correo"
+                                   TextColor="Black"
+                                   Keyboard="Email"
+                                   Text="{Binding Email}"
+                                   HeightRequest="60"
+                                   FontFamily="Montserrat-Medium"
+                                   FontSize="16"
+                                   PlaceholderColor="#535862"/>
+                        </Border>
 
-                    <Border Grid.Row="1"
-                            HeightRequest="60"
-                            Margin="15,10,15,0"
-                            Padding="15"
-                            BackgroundColor="#f5f5f5"
-                            StrokeThickness="0"
-                            VerticalOptions="Start">
-                        <Border.StrokeShape>
-                            <RoundRectangle CornerRadius="30"/>
-                        </Border.StrokeShape>
-                        <Entry Placeholder="Contraseña"
-                                TextColor="Black"
+                        <Border Grid.Row="1"
                                 HeightRequest="60"
-                                FontFamily="Montserrat-Medium"
-                                FontSize="16"
-                                PlaceholderColor="#535862"/>
-                    </Border>
-                    
-                    <Border Grid.Row="1"
-                            HeightRequest="60"
-                            Margin="15,10,15,0"
-                            Padding="15"
-                            Stroke="#f5f5f5"
-                            StrokeThickness="2"
-                            VerticalOptions="Start">
-                        <Border.StrokeShape>
-                            <RoundRectangle CornerRadius="30"/>
-                        </Border.StrokeShape>
-                        <!--<Border.GestureRecognizers>
-                            <TapGestureRecognizer Tapped="OnUploadProfileClicked"/>
-                        </Border.GestureRecognizers>-->
-                        <Grid>
-                            <Label Text="Subir foto de perfil"
-                                    TextColor="#535862"
-                                    Margin="4,0,0,0"
-                                    FontFamily="Montserrat-Medium"
-                                    FontSize="16"/>
-                            <Image Source="subir.png"
-                                HeightRequest="20"
-                                WidthRequest="20"
-                                Margin="0,0,10,0"
-                                HorizontalOptions="End"
-                                VerticalOptions="Center"/>
-                        </Grid>
-                    </Border>
+                                Margin="15,10,15,0"
+                                Padding="15"
+                                BackgroundColor="#f5f5f5"
+                                StrokeThickness="0"
+                                VerticalOptions="Start">
+                            <Border.StrokeShape>
+                                <RoundRectangle CornerRadius="30"/>
+                            </Border.StrokeShape>
+                            <Entry Placeholder="Contraseña"
+                                   TextColor="Black"
+                                   HeightRequest="60"
+                                   Keyboard="Password"
+                                   Text="{Binding Password}"
+                                   FontFamily="Montserrat-Medium"
+                                   FontSize="16"
+                                   PlaceholderColor="#535862"/>
+                        </Border>
+
+                        <Border Grid.Row="1"
+                                HeightRequest="60"
+                                Margin="15,10,15,0"
+                                Padding="15"
+                                Stroke="#f5f5f5"
+                                StrokeThickness="2"
+                                VerticalOptions="Start">
+                            <Border.StrokeShape>
+                                <RoundRectangle CornerRadius="30"/>
+                            </Border.StrokeShape>
+                            <Border.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding PickImageCommand}"/>
+                            </Border.GestureRecognizers>
+                            <Grid>
+                                <Label Text="Subir foto de perfil"
+                                       TextColor="#535862"
+                                       Margin="4,0,0,0"
+                                       FontFamily="Montserrat-Medium"
+                                       FontSize="16"/>
+                                <Image Source="{Binding ProfilePhotoDisplay}"
+                                       Aspect="AspectFill"
+                                       HeightRequest="30"
+                                       WidthRequest="30"
+                                       Margin="0,0,10,0"
+                                       HorizontalOptions="End"
+                                       VerticalOptions="Center">
+                                    <Image.Clip>
+                                        <EllipseGeometry Center="15,15"
+                                                RadiusX="15"
+                                                RadiusY="15"/>
+                                    </Image.Clip>
+                                </Image>
+                            </Grid>
+                        </Border>
+                        <ActivityIndicator IsRunning="{Binding IsBusy}"
+                                           IsVisible="{Binding IsBusy}"
+                                           Color="#ffd917"
+                                           HeightRequest="50"
+                                           WidthRequest="50"
+                                           HorizontalOptions="Center"
+                                           Margin="0,20,0,0"/>
                     </VerticalStackLayout>
                     <Button Text="Crear Cuenta"
                             BackgroundColor="Black"
                             Grid.Row="1"
+                            Command="{Binding RegisterCommand}"
                             TextColor="White"
                             CornerRadius="30"
                             HeightRequest="60"

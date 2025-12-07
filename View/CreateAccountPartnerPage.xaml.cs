@@ -4,9 +4,12 @@ namespace appointex;
 
 public partial class CreateAccountPartnerPage : ContentPage
 {
-	public CreateAccountPartnerPage()
-	{
-		InitializeComponent();
-		//BindingContext = new InicioViewModel();
-	}
+    public CreateAccountPartnerPage(CreateAccountViewModel viewModel)
+    {
+        InitializeComponent();
+        
+        viewModel.Role = 2; 
+        
+        BindingContext = viewModel;
+    }
 }
