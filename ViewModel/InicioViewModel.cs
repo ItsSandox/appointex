@@ -28,6 +28,9 @@ namespace appointex.ViewModels
         private string _subtitleText;
 
         [ObservableProperty]
+        private string _headerImageSource;
+
+        [ObservableProperty]
         private string _primaryButtonText;
 
         [ObservableProperty]
@@ -79,6 +82,7 @@ namespace appointex.ViewModels
         }
         private void SetWelcomeState()
         {
+            HeaderImageSource = "foto_inicio_1.png";
             TitleText = "Bienvenido";
             SubtitleText = "Puedes iniciar sesión si ya tienes cuenta o crear una nueva en segundos.";
             PrimaryButtonText = "Iniciar Sesión";
@@ -89,6 +93,7 @@ namespace appointex.ViewModels
 
         private void SetRegisterState()
         {
+            HeaderImageSource = "foto_inicio_2.png";
             TitleText = "¿Cómo quieres continuar?";
             SubtitleText = "Escoge si usarás la aplicación como cliente o como socio.";
             PrimaryButtonText = "Cliente";

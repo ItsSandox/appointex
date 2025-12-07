@@ -9,47 +9,33 @@ namespace appointex.ViewModels
     public partial class CreateAccountViewModel : ObservableObject
     {
         private readonly SupabaseService _supabaseService;
-
-        // Variable para guardar el archivo de foto temporalmente
         private FileResult? _selectedImageFile;
 
         public CreateAccountViewModel(SupabaseService supabaseService)
         {
             _supabaseService = supabaseService;
-            // Imagen por defecto (puedes poner una url o recurso local)
             ProfilePhotoDisplay = "subir.png";
         }
 
-        // --- PROPIEDADES ---
         [ObservableProperty] private string _username;
         [ObservableProperty] private string _email;
         [ObservableProperty] private string _password;
         [ObservableProperty] private string _profession;
-
-        // Esta propiedad controla qué imagen se ve en el círculo
         [ObservableProperty] private ImageSource _profilePhotoDisplay;
-
-        // 1 = Cliente, 2 = Socio (Se asignará desde el CodeBehind de la vista)
-        [ObservableProperty] private int _role;
-
+        [ObservableProperty] private int _role; // 1 = Cliente, 2 = Socio
         [ObservableProperty]
         [NotifyCanExecuteChangedFor(nameof(RegisterCommand))]
         private bool _isBusy;
 
-
-        // --- COMANDO: SELECCIONAR FOTO (Android/iOS Picker) ---
         [RelayCommand]
         private async Task PickImage()
         {
             try
             {
-                // Abre la galería nativa del teléfono
                 var result = await MediaPicker.Default.PickPhotoAsync();
-
                 if (result != null)
                 {
                     _selectedImageFile = result;
-                    // Actualizamos la UI para que el usuario vea la foto que eligió
                     var stream = await result.OpenReadAsync();
                     ProfilePhotoDisplay = ImageSource.FromStream(() => stream);
                 }
@@ -60,13 +46,11 @@ namespace appointex.ViewModels
             }
         }
 
-
-        // --- COMANDO: REGISTRAR ---
         [RelayCommand]
         private async Task Register()
         {
             if (IsBusy) return;
-            // Validaciones básicas...
+            
             if (string.IsNullOrWhiteSpace(Email) || string.IsNullOrWhiteSpace(Password) || string.IsNullOrWhiteSpace(Username))
             {
                 await Shell.Current.DisplayAlert("Faltan datos", "Por favor llena los campos obligatorios.", "OK");
@@ -77,55 +61,39 @@ namespace appointex.ViewModels
 
             try
             {
-                // ---------------------------------------------------------
-                // PASO 1: CREAR LA CUENTA (SignUp)
-                // ---------------------------------------------------------
+                // PASO 1: CREAR CUENTA
                 var session = await _supabaseService.Client.Auth.SignUp(Email, Password);
 
-                // Verificamos si se creó el usuario
                 if (session?.User?.Id == null)
-                {
-                    // Si falla, intentamos ver si el usuario ya existe o lanzar error
                     throw new Exception("No se pudo crear el usuario. Verifica si el correo ya existe.");
-                }
 
-                // ---------------------------------------------------------
-                // PASO 2: FORZAR INICIO DE SESIÓN (SignIn) - CRUCIAL PARA RLS
-                // ---------------------------------------------------------
-                // Esto asegura que el cliente de Supabase tenga el TOKEN de acceso válido
-                // para poder escribir en la tabla 'users' y en el 'storage'.
+                // PASO 2: INICIAR SESIÓN (Necesario para RLS)
                 try
                 {
                     await _supabaseService.Client.Auth.SignIn(Email, Password);
                 }
-                catch (Exception loginEx)
+                catch (Exception)
                 {
-                    // OJO: Si tienes "Confirmar Email" activado en Supabase, esto fallará
-                    // porque el usuario aún no ha verificado su correo.
-                    throw new Exception("Cuenta creada, pero no se pudo iniciar sesión automáticamente. Posiblemente requieras confirmar tu email.");
+                    throw new Exception("Cuenta creada, pero error al iniciar sesión.");
                 }
 
-                // Recuperamos el ID del usuario YA AUTENTICADO
                 var currentUser = _supabaseService.Client.Auth.CurrentUser;
-                if (currentUser == null) throw new Exception("Error obteniendo la sesión del usuario.");
+                if (currentUser == null) throw new Exception("Error obteniendo sesión.");
 
                 string userId = currentUser.Id;
                 string photoUrl = null;
 
-                // ---------------------------------------------------------
-                // PASO 3: SUBIR FOTO (Ahora sí tenemos permiso RLS)
-                // ---------------------------------------------------------
+                // PASO 3: SUBIR FOTO
                 if (_selectedImageFile != null)
                 {
                     var fileName = $"{userId}{Path.GetExtension(_selectedImageFile.FileName)}";
-
                     using var stream = await _selectedImageFile.OpenReadAsync();
                     using var memoryStream = new MemoryStream();
                     await stream.CopyToAsync(memoryStream);
                     var imageBytes = memoryStream.ToArray();
 
                     await _supabaseService.Client.Storage
-                        .From("profile_pictures") // Asegúrate que este bucket sea público o tenga policies correctas
+                        .From("profile_pictures")
                         .Upload(imageBytes, fileName);
 
                     photoUrl = _supabaseService.Client.Storage
@@ -133,27 +101,35 @@ namespace appointex.ViewModels
                         .GetPublicUrl(fileName);
                 }
 
-                // ---------------------------------------------------------
-                // PASO 4: INSERTAR DATOS EN TABLA PÚBLICA (Ahora sí tenemos permiso RLS)
-                // ---------------------------------------------------------
+                // PASO 4: INSERTAR EN BASE DE DATOS
                 var newUser = new AppUser
                 {
-                    UserId = userId, // Este ID debe coincidir con auth.uid() en tus políticas RLS
+                    UserId = userId,
                     Username = Username,
                     Role = Role,
                     Profession = Role == 2 ? Profession : null,
                     ProfilePhotoUrl = photoUrl
                 };
-                await Shell.Current.DisplayAlert("Error", $"Detalle: {userId}", "OK");
 
                 await _supabaseService.Client.From<AppUser>().Insert(newUser);
 
                 // ---------------------------------------------------------
-                // PASO 5: NAVEGACIÓN
+                // PASO 5: NAVEGACIÓN CONDICIONAL
                 // ---------------------------------------------------------
-                await Shell.Current.DisplayAlert("¡Bienvenido!", "Tu cuenta ha sido configurada.", "OK");
-                await Shell.Current.GoToAsync($"//{nameof(DashboardPage)}");
+                await Shell.Current.DisplayAlert("¡Bienvenido!", "Tu cuenta ha sido creada con éxito.", "OK");
 
+                if (Role == 2)
+                {
+                    // ES SOCIO -> Mandar a PlansPage
+                    // Asegúrate de tener: Routing.RegisterRoute(nameof(PlansPage), typeof(PlansPage)); en AppShell
+                    await Shell.Current.GoToAsync(nameof(PlansPage));
+                }
+                else
+                {
+                    // ES USUARIO -> Mandar a Dashboard
+                    // Usamos // para reiniciar la pila de navegación
+                    await Shell.Current.GoToAsync($"//{nameof(DashboardPage)}");
+                }
             }
             catch (Exception ex)
             {

@@ -12,6 +12,19 @@
                 <RowDefinition Height="Auto"/>
             </Grid.RowDefinitions>
 
+
+            <ContentView Grid.Row="0"
+                         Padding="20,0,20,0"
+                         Margin="0,0,0,-50"
+                         HorizontalOptions="FillAndExpand"
+                         VerticalOptions="FillAndExpand">
+
+                <Image Source="{Binding HeaderImageSource}"
+                       Aspect="AspectFit"
+                       HorizontalOptions="Center"
+                       VerticalOptions="Center"/>
+
+            </ContentView>
             <!-- Borde Inferior -->
             <Border Grid.Row="1"
                     BackgroundColor="#ffd917"
@@ -36,16 +49,16 @@
                     <!-- TEXTOS DINÁMICOS -->
                     <Label Text="{Binding TitleText}"
                            FontSize="24"
-                            Margin="0,30,0,0"
-                            FontFamily="Montserrat-SemiBold"/>
+                           Margin="0,30,0,0"
+                           FontFamily="Montserrat-SemiBold"/>
 
                     <Label Text="{Binding SubtitleText}"
                            FontSize="15"
-                            FontFamily="Montserrat-Regular"
-                            Margin="0,0,0,30"/>
+                           FontFamily="Montserrat-Regular"
+                           Margin="0,0,0,30"/>
 
                     <Grid ColumnSpacing="10"
-                            Margin="0,0,0,20">
+                          Margin="0,0,0,20">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="*"/>
                             <ColumnDefinition Width="*"/>

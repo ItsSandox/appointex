@@ -18,6 +18,8 @@ namespace appointex.ViewModels
         [ObservableProperty]
         private bool _isRefreshing;
         // --- PROPIEDADES DE PERFIL ---
+        [ObservableProperty] private string _actionButtonText;
+        private int _currentUserRole;
         [ObservableProperty] private string _userName;
         [ObservableProperty] private string _userProfilePhoto;
 
@@ -25,6 +27,7 @@ namespace appointex.ViewModels
         [ObservableProperty] private bool _isAddButtonVisible;
         [ObservableProperty] private string _emptyStateMessage;
         [ObservableProperty] private bool _isBusy;
+        
 
         // --- COLECCIÓN DE SERVICIOS ---
         public ObservableCollection<AppService> Services { get; }
@@ -52,13 +55,14 @@ namespace appointex.ViewModels
                     UserName = userResponse.Username;
                     // Si no tiene foto, ponemos una por defecto o dejamos vacío
                     UserProfilePhoto = string.IsNullOrEmpty(userResponse.ProfilePhotoUrl) ? "user_placeholder.png" : userResponse.ProfilePhotoUrl;
-
+                    _currentUserRole = userResponse.Role;
                     // 2. CONFIGURAR SEGÚN ROL
                     // Rol 1 = Cliente, Rol 2 = Socio
                     if (userResponse.Role == 2)
                     {
                         // ES SOCIO
                         IsAddButtonVisible = true;
+                        ActionButtonText = "Editar";
                         EmptyStateMessage = "Agrega un servicio para comenzar a recibir clientes.";
                         await LoadServicesForPartner(userResponse.UserId);
                     }
@@ -66,6 +70,7 @@ namespace appointex.ViewModels
                     {
                         // ES CLIENTE
                         IsAddButtonVisible = false;
+                        ActionButtonText = "Solicitar";
                         EmptyStateMessage = "Parece que no hay ningún servicio disponible por ahora.";
                         await LoadServicesForClient();
                     }
@@ -137,12 +142,18 @@ namespace appointex.ViewModels
 
             // CREAMOS EL DICCIONARIO DE PARÁMETROS
             var navigationParameter = new Dictionary<string, object>
-    {
-        { "ServiceObj", service } // "ServiceObj" debe coincidir con el QueryProperty del otro ViewModel
-    };
-
-            // PASAMOS EL DICCIONARIO AL NAVEGAR
-            await Shell.Current.GoToAsync(nameof(Solicitar), navigationParameter);
+            {
+                { "ServiceObj", service } // "ServiceObj" debe coincidir con el QueryProperty del otro ViewModel
+            };
+            if (_currentUserRole == 2) // ES SOCIO -> VA A EDITAR
+            {
+                // Asegúrate de registrar esta ruta en AppShell
+                await Shell.Current.GoToAsync(nameof(EditarServicio), navigationParameter);
+            }
+            else // ES CLIENTE -> VA A SOLICITAR
+            {
+                await Shell.Current.GoToAsync(nameof(Solicitar), navigationParameter);
+            }
         }
 
         [RelayCommand]
